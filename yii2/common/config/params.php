@@ -1,7 +1,7 @@
 <?php
 return [
-    'adminEmail' => 'admin@example.com',
-    'supportEmail' => 'support@example.com',
+    'adminEmail' => 'shihaoming@nkdxhlwsjkkfx.wecom.work',
+    'supportEmail' => 'shihaoming@nkdxhlwsjkkfx.wecom.work',
     'senderEmail' => 'noreply@example.com',
     'senderName' => 'Example.com mailer',
     'user.passwordResetTokenExpire' => 3600,

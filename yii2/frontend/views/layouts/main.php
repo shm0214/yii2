@@ -1,3 +1,9 @@
+<?php
+use common\widgets\Alert;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
@@ -32,6 +38,7 @@
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <script src="js/3dslider.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=ab9f0eb3008db971cfd71a9ec76c19e8"></script> 
 </head>
 
 <body class="game_info" data-spy="scroll" data-target=".header">
@@ -40,7 +47,7 @@
         <img class="preloader" src="images/loading-img.gif" alt="">
     </div>
     <!-- END LOADER -->
-    <section id="top">
+    <div id="top">
         <header>
             <div class="container">
                 <div class="header-top">
@@ -57,7 +64,7 @@
                             <div class="right_top_section" style="display: flex">
                                 <!-- social icon -->
                                 <ul class="social-icons pull-left">
-                                    <li><a class="github" href="https://github.com/kmtjro/InternetWork
+                                    <li><a class="github" href="https://gitee.com/internet-work/InternetWork
 "><i class="fa fa-github"></i></a></li>
                                     <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
                                     <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
@@ -74,7 +81,7 @@
                                     </li>
                                     <li>
                                         <div class="cart-option">
-                                            <a href="#"><i class="fa
+                                            <a href="index.php?r=site/signup"><i class="fa
                                                     fa-address-card"
                                                     style="font-size:13px"></i>注册</a>
                                         </div>
@@ -120,13 +127,19 @@
                                             </div>
                                             <div class="collapse navbar-collapse js-navbar-collapse">
                                                 <ul class="nav navbar-nav" style="height: 50px">
-                                                    <li class="active" style="height: 50px"><a href="index.php?r=site/index" style="line-height: 0px">主页</a></li>
-                                                    <li style="height: 50px"><a href="index.php?r=site/about" style="line-height: 0px">关于</a></li>
-                                                    <li style="height: 50px"><a href="index.php?r=medal" style="line-height: 0px">奖牌</a></li>
-                                                    <li style="height: 50px"><a href="news.html" style="line-height: 0px">News</a></li>
-                                                    <li class="dropdown mega-dropdown" style="height: 50px" >
-                                                        <a href="match" class="dropdown-toggle"
-                                                            data-toggle="dropdown" style="line-height: 0px">Match<span class="caret"></span></a>
+                                                    <li class="active" style="height: 50px"><a
+                                                            href="index.php?r=site/index"
+                                                            style="line-height: 0px">主页</a></li>
+                                                    <li style="height: 50px"><a href="index.php?r=site/about"
+                                                            style="line-height: 0px">关于</a></li>
+                                                    <li style="height: 50px"><a href="index.php?r=medal"
+                                                            style="line-height: 0px">奖牌</a></li>
+                                                    <li style="height: 50px"><a href="news.html"
+                                                            style="line-height: 0px">News</a></li>
+                                                    <li class="dropdown mega-dropdown" style="height: 50px">
+                                                        <a href="match" class="dropdown-toggle" data-toggle="dropdown"
+                                                            style="line-height: 0px">Match<span
+                                                                class="caret"></span></a>
                                                         <ul class="dropdown-menu mega-dropdown-menu" style="top: 50px">
                                                             <li class="col-sm-8">
                                                                 <ul>
@@ -196,8 +209,10 @@
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li style="height: 50px"><a href="blog.html" style="line-height: 0px">Blog</a></li>
-                                                    <li style="height: 50px"><a href="contact.html" style="line-height: 0px">contact</a></li>
+                                                    <li style="height: 50px"><a href="blog.html"
+                                                            style="line-height: 0px">Blog</a></li>
+                                                    <li style="height: 50px"><a href="contact.html"
+                                                            style="line-height: 0px">contact</a></li>
                                                 </ul>
                                             </div>
                                             <!-- /.nav-collapse -->
@@ -286,10 +301,11 @@
             <div class="news">
                 <div class="container" style="width: fit-content;">
                     <div class="heading-slider" style="center">
-                        <p class="headline"><img src="images/logo_color.svg" height=30/></p>
+                        <p class="headline"><img src="images/logo_color.svg" height=30 /></p>
                         <!--made by vipul mirajkar thevipulm.appspot.com-->
                         <h1>
-                            <a href="" class="typewrite" data-period="2000"
+                            <style text="text/css">a.typewrite:hover{color:white}</style>
+                            <a class="typewrite" data-period="2000"
                                 data-type='[ "2020东京奥运会 2021年7月23日-2021年8月8日 情同与共 United by Emotion 感動で、私たちはひとつになる"]'>
                                 <span class="wrap"></span>
                             </a>
@@ -299,10 +315,76 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <div class="container" style="margin-top:30px;">
+        <?= Alert::widget() ?>
+    </div>
+
+
+
     <?=$content?>
 
-    <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+    <footer id="footer" class="footer" style="background: #0e55b6; margin-top: 30px">
+         <div class="container" style="width:1400px">
+            <div class="row">
+               <div class="col-md-3">
+                  <div class="full">
+                     <div class="footer-widget">
+                        <div class="footer-logo">
+                           <a href="https://www.nankai.edu.cn/"><img src="images/nankai.png" style="width: 300px" /></a>
+                        </div>
+                        <p style="font-size: larger">南开大学<a href="http://courseware.nkdbis.cn/#/step-1" style="color:white;">互联网数据库开发</a>课程设计</p>
+                        <ul class="social-icons style-4 pull-left">
+                           <li><a class="github" href="https://gitee.com/internet-work/InternetWork
+
+"><i class="fa fa-github"></i></a></li>
+                           <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                           <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                           <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="full">
+                     <div class="footer-widget">
+                        <h3 style="border-bottom-color: white;">导航</h3>
+                        <ul class="footer-menu">
+                           <li><a href="index.php?r=site/index">主页</a></li>
+                           <li><a href="index.php?r=site/about">关于</a></li>
+                           <li><a href="index.php?r=medal">奖牌</a></li>
+                           <li><a href="matche.html">Recent Matchs</a></li>
+                           <li><a href="blog.html">Our Blog</a></li>
+                           <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="full">
+                     <div class="footer-widget">
+                        <h3 style="border-bottom-color: white;">联系我们</h3>
+                        <ul class="address-list">
+                           <li><i class="fa fa-map-marker"></i>天津海河教育园区同砚路38号 [300350]</li>
+                           <li><i class="fa fa-github"></i><a href="https://github.com/shm0214" style="color:white;">shm0214</a></li>
+                           <li><i style="font-size:20px;top:5px;" class="fa fa-envelope"></i>shm190813@gmail.com</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <div class="full">
+                     <div class="contact-footer" id="nkmap"></div> 
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer-bottom" style="border-top-color: white;background: #0e55b6;border-bottom-color: white;">
+            <div class="container">
+               <p>Copyright © 2021 Powered by <a href="https://www.yiiframework.com/" target="_blank">Yii2</a></p>
+            </div>
+         </div>
+      </footer>
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
@@ -328,4 +410,10 @@
             }
         })
     }
+
+    var map = new AMap.Map('nkmap', {
+        resizeEnable: true, //是否监控地图容器尺寸变化
+        zoom:15, //初始化地图层级
+        center: [117.345894,38.988826] //初始化地图中心点
+    });
 </script>
