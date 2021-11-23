@@ -1,13 +1,11 @@
 <?php
-
 namespace backend\controllers;
 
-use common\models\LoginForm;
 use Yii;
+use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use yii\web\Controller;
-use yii\web\Response;
+use common\models\LoginForm;
 
 /**
  * Site controller
@@ -25,6 +23,10 @@ class SiteController extends Controller
                 'rules' => [
                     [
                         'actions' => ['login', 'error'],
+                        'allow' => true,
+                    ],
+                    [
+                        'actions' => ['teamwork','personwork','download'],
                         'allow' => true,
                     ],
                     [
@@ -52,6 +54,12 @@ class SiteController extends Controller
             'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
+            'test' => [
+                'class' => 'backend\controllers\Download',
+                'param1' => 'hello',
+                'param2' => 'world',
+                'param3' => '!!!',
+            ],
         ];
     }
 
@@ -68,7 +76,7 @@ class SiteController extends Controller
     /**
      * Login action.
      *
-     * @return string|Response
+     * @return string
      */
     public function actionLogin()
     {
@@ -76,29 +84,58 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        $this->layout = 'blank';
-
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
+        } else {
+            $model->password = '';
+
+            return $this->render('login', [
+                'model' => $model,
+            ]);
         }
-
-        $model->password = '';
-
-        return $this->render('login', [
-            'model' => $model,
-        ]);
     }
 
     /**
      * Logout action.
      *
-     * @return Response
+     * @return string
      */
     public function actionLogout()
     {
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    /** 
+     * Displays teamwork page.
+     * 
+     * @return string
+     */
+    public function actionTeamwork()
+    {
+        return $this->render('teamwork');
+    }
+
+    /** 
+     * Displays personal work page.
+     * 
+     * @return string
+     */
+    public function actionPersonwork()
+    {
+        return $this->render('personwork');
+    }
+
+    /** 
+     * Displays personal work page.
+     * 
+     * @return string
+     */
+    public function actionDownload()
+    {
+        $filename= Yii::$app->requset->get('name');
+        return Yii::$app->response->sendFile("files/","test.txt");
     }
 }
