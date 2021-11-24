@@ -38,7 +38,8 @@ use common\widgets\Alert;
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <script src="js/3dslider.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=ab9f0eb3008db971cfd71a9ec76c19e8"></script> 
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=ab9f0eb3008db971cfd71a9ec76c19e8">
+</script>
 </head>
 
 <body class="game_info" data-spy="scroll" data-target=".header">
@@ -132,81 +133,103 @@ use common\widgets\Alert;
                                                             style="line-height: 0px">主页</a></li>
                                                     <li style="height: 50px"><a href="index.php?r=site/about"
                                                             style="line-height: 0px">关于</a></li>
-                                                    <li style="height: 50px"><a href="index.php?r=medal"
-                                                            style="line-height: 0px">奖牌</a></li>
                                                     <li style="height: 50px"><a href="news.html"
                                                             style="line-height: 0px">News</a></li>
                                                     <li class="dropdown mega-dropdown" style="height: 50px">
-                                                        <a href="match" class="dropdown-toggle" data-toggle="dropdown"
-                                                            style="line-height: 0px">Match<span
+                                                        <a href="index.php?r=medal" class="dropdown-toggle"
+                                                            data-toggle="dropdown" style="line-height: 0px" onclick="window.location.href='index.php?r=medal'">奖牌榜<span
                                                                 class="caret"></span></a>
-                                                        <ul class="dropdown-menu mega-dropdown-menu" style="top: 50px">
-                                                            <li class="col-sm-8">
-                                                                <ul>
-                                                                    <li class="dropdown-header">Men Collection</li>
-                                                                    <div id="menCollection" class="carousel slide"
-                                                                        data-ride="carousel">
-                                                                        <div class="carousel-inner">
-                                                                            <div class="item active">
-                                                                                <div class="banner-for-match"><a
-                                                                                        href="#"><img
-                                                                                            class="img-responsive"
-                                                                                            src="images/match-banner1.jpg"
-                                                                                            alt="#" /></a></div>
-                                                                            </div>
-                                                                            <!-- End Item -->
-                                                                            <div class="item">
-                                                                                <div class="banner-for-match"><a
-                                                                                        href="#"><img
-                                                                                            class="img-responsive"
-                                                                                            src="images/match-banner1.jpg"
-                                                                                            alt="#" /></a></div>
-                                                                            </div>
-                                                                            <!-- End Item -->
-                                                                            <div class="item">
-                                                                                <div class="banner-for-match"><a
-                                                                                        href="#"><img
-                                                                                            class="img-responsive"
-                                                                                            src="images/match-banner1.jpg"
-                                                                                            alt="#" /></a></div>
-                                                                            </div>
-                                                                            <!-- End Item -->
-                                                                        </div>
-                                                                        <!-- End Carousel Inner -->
-                                                                        <!-- Controls -->
-                                                                        <a class="left carousel-control"
-                                                                            href="#menCollection" role="button"
-                                                                            data-slide="prev">
-                                                                            <span
-                                                                                class="glyphicon glyphicon-chevron-left"
-                                                                                aria-hidden="true"></span>
-                                                                            <span class="sr-only">Previous</span>
-                                                                        </a>
-                                                                        <a class="right carousel-control"
-                                                                            href="#menCollection" role="button"
-                                                                            data-slide="next">
-                                                                            <span
-                                                                                class="glyphicon glyphicon-chevron-right"
-                                                                                aria-hidden="true"></span>
-                                                                            <span class="sr-only">Next</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- /.carousel -->
-                                                                </ul>
-                                                            </li>
-                                                            <li class="col-sm-4">
-                                                                <ul class="menu-inner">
-                                                                    <li class="dropdown-header">Next Matchs</li>
-                                                                    <li><a href="#">Contrary vs classical</a></li>
-                                                                    <li><a href="#">Discovered vs undoubtable</a></li>
-                                                                    <li><a href="#">Contrary vs classical</a></li>
-                                                                    <li><a href="#">Discovered vs undoubtable</a></li>
-                                                                    <li><a href="#">Contrary vs classical</a></li>
-                                                                    <li><a href="#">Discovered vs undoubtable</a></li>
-                                                                    <li><a href="#">Contrary vs classical</a></li>
-                                                                    <li><a href="#">Discovered vs undoubtable</a></li>
-                                                                </ul>
-                                                            </li>
+                                                        <ul class="dropdown-menu mega-dropdown-menu" style="top: 50px; background: #0e55b6; width: 58%;margin-left: 100px; height: 250px">
+                                                            <div class="top_paiM" style="margin-left: 10px">
+                                                                <h5><span id='not' class="title" data-spm-anchor-id="0.P1MICI5m5UJV.EalId75omwTo.i0">奖牌榜<a id="country" href="index.php?r=medal"><img src="images/topicon.png" /></a></span></h5>
+                                                                <span id='not' class="line" style="margin-top:10px"></span>
+                                                                <table>
+                                                                    <tbody id="jpb">
+                                                                        <tr class="paiM_title">
+                                                                            <th>名次</th>
+                                                                            <th class="country">国家/地区</th>
+                                                                            <th>
+                                                                                <img src="images/jiangjin.png"
+                                                                                    alt="">
+                                                                            </th>
+                                                                            <th>
+                                                                                <img src="images/jiangyin.png"
+                                                                                    alt="">
+                                                                            </th>
+                                                                            <th>
+                                                                                <img src="images/jiangtong.png"
+                                                                                    alt="">
+                                                                            </th>
+                                                                            <th>总</th>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td class="country"><a id="country"
+                                                                                    href="//2020.cctv.com/medal_list/details/index.shtml?spm=0.P1MICI5m5UJV.EalId75omwTo.2&amp;countryid=USA"
+                                                                                    ><i
+                                                                                        class="flag"><img
+                                                                                            src="images/flag/US.png"
+                                                                                            ></i> 美国</a></td>
+                                                                            <td>39</td>
+                                                                            <td>41</td>
+                                                                            <td>33</td>
+                                                                            <td>113</td>
+                                                                        </tr>
+                                                                        <tr class="paiM_high">
+                                                                            <td>2</td>
+                                                                            <td class="country"><a id="country"
+                                                                                    href="//2020.cctv.com/medal_list/details/index.shtml?countryid=CHN"
+                                                                                    ><i
+                                                                                        class="flag"><img
+                                                                                            src="images/flag/CN.png"
+                                                                                            alt=""></i> 中国</a></td>
+                                                                            <td>38</td>
+                                                                            <td>32</td>
+                                                                            <td>18</td>
+                                                                            <td>88</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td class="country"><a id="country"
+                                                                                    href="//2020.cctv.com/medal_list/details/index.shtml?countryid=JPN"
+                                                                                    ><i
+                                                                                        class="flag"><img
+                                                                                            src="images/flag/JP.png"
+                                                                                            alt=""></i> 日本</a></td>
+                                                                            <td>27</td>
+                                                                            <td>14</td>
+                                                                            <td>17</td>
+                                                                            <td>58</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>4</td>
+                                                                            <td class="country"><a id="country"
+                                                                                    href="//2020.cctv.com/medal_list/details/index.shtml?countryid=GBR"
+                                                                                    ><i
+                                                                                        class="flag"><img
+                                                                                            src="images/flag/GB.png"
+                                                                                            alt=""></i> 英国</a></td>
+                                                                            <td>22</td>
+                                                                            <td>21</td>
+                                                                            <td>22</td>
+                                                                            <td>65</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>5</td>
+                                                                            <td class="country"><a id="country"
+                                                                                    href="//2020.cctv.com/medal_list/details/index.shtml?countryid=ROC"
+                                                                                    ><i
+                                                                                        class="flag"><img
+                                                                                            src="images/flag/ROC.png"
+                                                                                            alt=""></i> ROC</a></td>
+                                                                            <td>17</td>
+                                                                            <td>7</td>
+                                                                            <td>22</td>
+                                                                            <td>46</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
                                                         </ul>
                                                     </li>
                                                     <li style="height: 50px"><a href="blog.html"
@@ -236,50 +259,42 @@ use common\widgets\Alert;
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <!-- First slide -->
-                    <div class="item active deepskyblue" data-ride="carousel" data-interval="5000">
+                    <div class="item active slider3" data-ride="carousel" data-interval="5000">
                         <div class="carousel-caption">
                             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                 <div class="slider-contant" data-animation="animated fadeInRight">
-                                    <h3>If you Don’t Practice<br>You <span class="color-yellow">Don’t
-                                            Derserve</span><br>to win!</h3>
-                                    <p>If you use this site regularly and would like to help keep the site on the
-                                        Internet,<br>
-                                        please consider donating a small sum to help pay..
-                                    </p>
-                                    <button class="btn btn-primary btn-lg">Read More</button>
+                                    <h3 style="line-height:1.2">2020 东京奥运会<br> <span
+                                            class="color-yellow">2021.7.23-2021.8.8</span><br>情同与共</h3>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- /.item -->
                     <!-- Second slide -->
-                    <div class="item skyblue" data-ride="carousel" data-interval="5000">
+                    <div class="item slider2" data-ride="carousel" data-interval="5000">
                         <div class="carousel-caption">
                             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                 <div class="slider-contant" data-animation="animated fadeInRight">
-                                    <h3>If you Don’t Practice<br>You <span class="color-yellow">Don’t
-                                            Derserve</span><br>to win!</h3>
-                                    <p>You can make a case for several potential winners of<br>the expanded European
-                                        Championships.</p>
-                                    <button class="btn btn-primary btn-lg">Button</button>
+                                    <h3 style="line-height:1.2">2020 东京奥运会<br> <span
+                                            class="color-yellow">2021.7.23-2021.8.8</span><br>情同与共</h3>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- /.item -->
                     <!-- Third slide -->
-                    <div class="item darkerskyblue" data-ride="carousel" data-interval="5000">
+                    <div class="item slider1" data-ride="carousel" data-interval="5000">
                         <div class="carousel-caption">
                             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                 <div class="slider-contant" data-animation="animated fadeInRight">
-                                    <h3>If you Don’t Practice<br>You <span class="color-yellow">Don’t
-                                            Derserve</span><br>to win!</h3>
-                                    <p>You can make a case for several potential winners of<br>the expanded European
-                                        Championships.</p>
-                                    <button class="btn btn-primary btn-lg">Button</button>
+                                    <h3 style="line-height:1.2">2020 东京奥运会<br> <span
+                                            class="color-yellow">2021.7.23-2021.8.8</span><br>情同与共</h3>
+
                                 </div>
                             </div>
                         </div>
@@ -287,15 +302,6 @@ use common\widgets\Alert;
                     <!-- /.item -->
                 </div>
                 <!-- /.carousel-inner -->
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
             <!-- /.carousel -->
             <div class="news">
@@ -304,7 +310,11 @@ use common\widgets\Alert;
                         <p class="headline"><img src="images/logo_color.svg" height=30 /></p>
                         <!--made by vipul mirajkar thevipulm.appspot.com-->
                         <h1>
-                            <style text="text/css">a.typewrite:hover{color:white}</style>
+                            <style text="text/css">
+                                a.typewrite:hover {
+                                    color: white
+                                }
+                            </style>
                             <a class="typewrite" data-period="2000"
                                 data-type='[ "2020东京奥运会 2021年7月23日-2021年8月8日 情同与共 United by Emotion 感動で、私たちはひとつになる"]'>
                                 <span class="wrap"></span>
@@ -325,66 +335,70 @@ use common\widgets\Alert;
     <?=$content?>
 
     <footer id="footer" class="footer" style="background: #0e55b6; margin-top: 30px">
-         <div class="container" style="width:1400px">
+        <div class="container" style="width:1400px">
             <div class="row">
-               <div class="col-md-3">
-                  <div class="full">
-                     <div class="footer-widget">
-                        <div class="footer-logo">
-                           <a href="https://www.nankai.edu.cn/"><img src="images/nankai.png" style="width: 300px" /></a>
-                        </div>
-                        <p style="font-size: larger">南开大学<a href="http://courseware.nkdbis.cn/#/step-1" style="color:white;">互联网数据库开发</a>课程设计</p>
-                        <ul class="social-icons style-4 pull-left">
-                           <li><a class="github" href="https://gitee.com/internet-work/InternetWork
+                <div class="col-md-3">
+                    <div class="full">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="https://www.nankai.edu.cn/"><img src="images/nankai.png"
+                                        style="width: 300px" /></a>
+                            </div>
+                            <p style="font-size: larger">南开大学<a href="http://courseware.nkdbis.cn/#/step-1"
+                                    style="color:white;">互联网数据库开发</a>课程设计</p>
+                            <ul class="social-icons style-4 pull-left">
+                                <li><a class="github" href="https://gitee.com/internet-work/InternetWork
 
 "><i class="fa fa-github"></i></a></li>
-                           <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                           <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
-                           <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-2">
-                  <div class="full">
-                     <div class="footer-widget">
-                        <h3 style="border-bottom-color: white;">导航</h3>
-                        <ul class="footer-menu">
-                           <li><a href="index.php?r=site/index">主页</a></li>
-                           <li><a href="index.php?r=site/about">关于</a></li>
-                           <li><a href="index.php?r=medal">奖牌</a></li>
-                           <li><a href="matche.html">Recent Matchs</a></li>
-                           <li><a href="blog.html">Our Blog</a></li>
-                           <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-2">
-                  <div class="full">
-                     <div class="footer-widget">
-                        <h3 style="border-bottom-color: white;">联系我们</h3>
-                        <ul class="address-list">
-                           <li><i class="fa fa-map-marker"></i>天津海河教育园区同砚路38号 [300350]</li>
-                           <li><i class="fa fa-github"></i><a href="https://github.com/shm0214" style="color:white;">shm0214</a></li>
-                           <li><i style="font-size:20px;top:5px;" class="fa fa-envelope"></i>shm190813@gmail.com</li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-5">
-                  <div class="full">
-                     <div class="contact-footer" id="nkmap"></div> 
-                  </div>
-               </div>
+                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="full">
+                        <div class="footer-widget">
+                            <h3 style="border-bottom-color: white;">导航</h3>
+                            <ul class="footer-menu">
+                                <li><a href="index.php?r=site/index">主页</a></li>
+                                <li><a href="index.php?r=site/about">关于</a></li>
+                                <li><a href="index.php?r=medal">奖牌榜</a></li>
+                                <li><a href="matche.html">Recent Matchs</a></li>
+                                <li><a href="blog.html">Our Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="full">
+                        <div class="footer-widget">
+                            <h3 style="border-bottom-color: white;">联系我们</h3>
+                            <ul class="address-list">
+                                <li><i class="fa fa-map-marker"></i>天津海河教育园区同砚路38号 [300350]</li>
+                                <li><i class="fa fa-github"></i><a href="https://github.com/shm0214"
+                                        style="color:white;">shm0214</a></li>
+                                <li><i style="font-size:20px;top:5px;" class="fa fa-envelope"></i>shm190813@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="full">
+                        <div class="contact-footer" id="nkmap"></div>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="footer-bottom" style="border-top-color: white;background: #0e55b6;border-bottom-color: white;">
+        </div>
+        <div class="footer-bottom" style="border-top-color: white;background: #0e55b6;border-bottom-color: white;">
             <div class="container">
-               <p>Copyright © 2021 Powered by <a href="https://www.yiiframework.com/" target="_blank">Yii2</a></p>
+                <p>Copyright © 2021 Powered by <a href="https://www.yiiframework.com/" target="_blank">Yii2</a></p>
             </div>
-         </div>
-      </footer>
+        </div>
+    </footer>
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
@@ -413,7 +427,11 @@ use common\widgets\Alert;
 
     var map = new AMap.Map('nkmap', {
         resizeEnable: true, //是否监控地图容器尺寸变化
-        zoom:15, //初始化地图层级
-        center: [117.345894,38.988826] //初始化地图中心点
+        zoom: 15, //初始化地图层级
+        center: [117.345894, 38.988826] //初始化地图中心点
     });
+
+    $('.carousel').carousel({
+        interval: 2000
+    })
 </script>
