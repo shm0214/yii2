@@ -26,7 +26,7 @@ class ResendVerificationEmailForm extends Model
             ['email', 'exist',
                 'targetClass' => '\common\models\User',
                 'filter' => ['status' => User::STATUS_INACTIVE],
-                'message' => 'There is no user with this email address.'
+                'message' => '没有用此邮件注册的用户'
             ],
         ];
     }
@@ -57,5 +57,12 @@ class ResendVerificationEmailForm extends Model
             ->setTo($this->email)
             ->setSubject(Yii::$app->name . '验证码')
             ->send();
+    }
+
+    public function attributeLabels()
+    {
+        return [
+            'email' => '电子邮箱',
+        ];
     }
 }

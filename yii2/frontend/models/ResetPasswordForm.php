@@ -30,11 +30,11 @@ class ResetPasswordForm extends Model
     public function __construct($token, $config = [])
     {
         if (empty($token) || !is_string($token)) {
-            throw new InvalidArgumentException('Password reset token cannot be blank.');
+            throw new InvalidArgumentException('token不能为空');
         }
         $this->_user = User::findByPasswordResetToken($token);
         if (!$this->_user) {
-            throw new InvalidArgumentException('Wrong password reset token.');
+            throw new InvalidArgumentException('token错误');
         }
         parent::__construct($config);
     }
@@ -63,5 +63,12 @@ class ResetPasswordForm extends Model
         $user->generateAuthKey();
 
         return $user->save(false);
+    }
+
+    public function attributeLabels()
+    {
+        return [
+            'password' => '密码',
+        ];
     }
 }
