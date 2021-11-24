@@ -26,11 +26,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['teamwork','personwork','download'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index','teamwork','personwork'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -80,6 +76,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout='@app/views/layouts/main-login.php';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
