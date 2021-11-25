@@ -11,7 +11,10 @@
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="info">
                 <a href="#" class="d-block">
-                <?php echo Yii::$app->user->identity->username ?>
+                <?php if(!Yii::$app->user->isGuest){
+                    echo Yii::$app->user->identity->username;
+                }
+                ?>
                 </a>
             </div>
         </div>
@@ -19,20 +22,30 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <?php
-            echo \hail812\adminlte\widgets\Menu::widget([
-                'items' => [
-                    ['label' => 'Yii2 PROVIDED', 'header' => true,'visible' => !YII_ENV_TEST],
-                    ['label' => 'Login', 'iconClassAdded' => 'text-info', 'url' => ['site/login'], 'icon' => 'sign-in-alt', 'visible' => Yii::$app->user->isGuest],
-                    ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank','visible' => !YII_ENV_TEST],
-                    ['label' => 'Debug', 'iconClassAdded' => 'text-danger', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank','visible' => !YII_ENV_TEST],
-                    ['label' => '作业展示', 'header' => true],
-                    ['label' => '团队作业', 'icon' => 'people-carry','url' => ['site/teamwork']],
-                    ['label' => '个人作业','icon' => 'id-badge', 'url' => ['site/personwork']],
-                    ['label' => 'TEAM', 'header' => true],
-                    ['label' => '团队成员', 'iconClassAdded' => 'text-warning', 'icon' => 'users-cog','url' => ['per-member-info/index']],
-                    ['label' => 'POST', 'header' => true],
-                ],
-            ]);
+            if( Yii::$app->user->isGuest){
+                echo \hail812\adminlte\widgets\Menu::widget([
+                    'items' => [
+                        ['label' => 'Login', 'iconClassAdded' => 'text-danger', 'url' => ['site/login'], 'icon' => 'sign-in-alt'],
+                    ],
+                ]);
+            }else{
+                echo \hail812\adminlte\widgets\Menu::widget([
+                    'items' => [
+                        ['label' => 'Yii2 PROVIDED', 'header' => true,'visible' => !YII_ENV_TEST],
+                        ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank','visible' => !YII_ENV_TEST],
+                        ['label' => 'Debug', 'iconClassAdded' => 'text-danger', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank','visible' => !YII_ENV_TEST],
+                        ['label' => '作业展示', 'header' => true],
+                        ['label' => '团队作业', 'icon' => 'people-carry','url' => ['site/teamwork']],
+                        ['label' => '个人作业','icon' => 'id-badge', 'url' => ['site/personwork']],
+                        ['label' => 'TEAM', 'header' => true,],
+                        ['label' => '团队成员','visible' =>Yii::$app->user->can('super'), 'iconClassAdded' => 'text-warning', 'icon' => 'users-cog','url' => ['per-member-info/index']],
+                        ['label' => '权限管理','visible' =>Yii::$app->user->can('super'), 'iconClassAdded' => 'text-warning', 'icon' => 'key','url' => ['auth-assignment/index']],
+                        ['label' => 'POST', 'header' => true,'visible' =>Yii::$app->user->can('managePost')],
+                        ['label' => '新闻发布管理','visible' =>Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'newspaper','url' => ['oly-news/index']],
+                        ['label' => '评论管理','visible' => Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'comments','url' => ['oly-newscomment/index']],
+                    ],
+                ]);
+            }
             ?>
         </nav>
         <!-- /.sidebar-menu -->

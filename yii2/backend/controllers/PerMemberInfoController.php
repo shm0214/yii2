@@ -5,6 +5,7 @@ namespace backend\controllers;
 use app\models\PerMemberInfo;
 use app\models\PerMemberInfoSearch;
 use yii\web\Controller;
+use backend\controllers\AdminController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -14,7 +15,7 @@ use yii\filters\AccessControl;
 /**
  * PerMemberInfoController implements the CRUD actions for PerMemberInfo model.
  */
-class PerMemberInfoController extends Controller
+class PerMemberInfoController extends AdminController
 {
     /**
      * @inheritDoc
@@ -30,16 +31,6 @@ class PerMemberInfoController extends Controller
                         'delete' => ['POST'],
                     ],
                 ],        
-                'access' => [
-                    'class' => AccessControl::className(),
-                    'rules' => [
-                        [
-                            'actions' => ['index', 'view','create','update','delete'],
-                            'allow' => true,
-                            'roles' => ['@'],
-                        ],
-                    ],
-                ],
             ]
         );
     }

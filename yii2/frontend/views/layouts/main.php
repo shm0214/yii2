@@ -136,12 +136,12 @@ use common\widgets\Alert;
                                                     <li style="height: 50px"><a href="news.html"
                                                             style="line-height: 0px">News</a></li>
                                                     <li class="dropdown mega-dropdown" style="height: 50px">
-                                                        <a href="index.php?r=medal" class="dropdown-toggle"
-                                                            data-toggle="dropdown" style="line-height: 0px" onclick="window.location.href='index.php?r=medal'">奖牌榜<span
+                                                        <a href="index.php?r=site/medal" class="dropdown-toggle"
+                                                            data-toggle="dropdown" style="line-height: 0px" onclick="window.location.href='index.php?r=site/medal'">奖牌榜<span
                                                                 class="caret"></span></a>
                                                         <ul class="dropdown-menu mega-dropdown-menu" style="top: 50px; background: #0e55b6; width: 58%;margin-left: 100px; height: 250px">
                                                             <div class="top_paiM" style="margin-left: 10px">
-                                                                <h5><span id='not' class="title" data-spm-anchor-id="0.P1MICI5m5UJV.EalId75omwTo.i0">奖牌榜<a id="country" href="index.php?r=medal"><img src="images/topicon.png" /></a></span></h5>
+                                                                <h5><span id='not' class="title" data-spm-anchor-id="0.P1MICI5m5UJV.EalId75omwTo.i0">奖牌榜<a id="country" href="index.php?r=site/medal"><img src="images/topicon.png" /></a></span></h5>
                                                                 <span id='not' class="line" style="margin-top:10px"></span>
                                                                 <table>
                                                                     <tbody id="jpb">
@@ -364,7 +364,7 @@ use common\widgets\Alert;
                             <ul class="footer-menu">
                                 <li><a href="index.php?r=site/index">主页</a></li>
                                 <li><a href="index.php?r=site/about">关于</a></li>
-                                <li><a href="index.php?r=medal">奖牌榜</a></li>
+                                <li><a href="index.php?r=site/medal">奖牌榜</a></li>
                                 <li><a href="matche.html">Recent Matchs</a></li>
                                 <li><a href="blog.html">Our Blog</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>

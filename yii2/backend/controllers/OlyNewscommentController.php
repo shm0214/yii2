@@ -1,17 +1,17 @@
 <?php
 
-namespace frontend\controllers;
+namespace backend\controllers;
 
-use frontend\models\OlyMedalInfo;
-use frontend\models\OlyMedalInfoSearch;
+use app\models\OlyNewscomment;
+use app\models\OlyNewscommentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use backend\controllers\PostController;
 /**
- * MedalController implements the CRUD actions for Medal model.
+ * OlyNewscommentController implements the CRUD actions for OlyNewscomment model.
  */
-class MedalController extends Controller
+class OlyNewscommentController extends PostController
 {
     /**
      * @inheritDoc
@@ -32,45 +32,45 @@ class MedalController extends Controller
     }
 
     /**
-     * Lists all Medal models.
+     * Lists all OlyNewscomment models.
      * @return mixed
      */
     public function actionIndex()
     {
-        //$searchModel = new OlyMedalInfoSearch();
-        //$dataProvider = $searchModel->search($this->request->queryParams);
+        $searchModel = new OlyNewscommentSearch();
+        $dataProvider = $searchModel->search($this->request->queryParams);
 
-        return $this->render('index'
-           // 'searchModel' => $searchModel,
-          //  'dataProvider' => $dataProvider,
-        );
-    }
-
-    /**
-     * Displays a single Medal model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
     /**
-     * Creates a new Medal model.
+     * Displays a single OlyNewscomment model.
+     * @param string $cmt_id 评论标识
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionView($cmt_id)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($cmt_id),
+        ]);
+    }
+
+    /**
+     * Creates a new OlyNewscomment model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Medal();
+        $model = new OlyNewscomment();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(['view', 'cmt_id' => $model->cmt_id]);
             }
         } else {
             $model->loadDefaultValues();
@@ -82,18 +82,18 @@ class MedalController extends Controller
     }
 
     /**
-     * Updates an existing Medal model.
+     * Updates an existing OlyNewscomment model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * @param string $cmt_id 评论标识
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
+    public function actionUpdate($cmt_id)
     {
-        $model = $this->findModel($id);
+        $model = $this->findModel($cmt_id);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'cmt_id' => $model->cmt_id]);
         }
 
         return $this->render('update', [
@@ -102,29 +102,29 @@ class MedalController extends Controller
     }
 
     /**
-     * Deletes an existing Medal model.
+     * Deletes an existing OlyNewscomment model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * @param string $cmt_id 评论标识
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($id)
+    public function actionDelete($cmt_id)
     {
-        $this->findModel($id)->delete();
+        $this->findModel($cmt_id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Medal model based on its primary key value.
+     * Finds the OlyNewscomment model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Medal the loaded model
+     * @param string $cmt_id 评论标识
+     * @return OlyNewscomment the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
+    protected function findModel($cmt_id)
     {
-        if (($model = Medal::findOne($id)) !== null) {
+        if (($model = OlyNewscomment::findOne($id)) !== null) {
             return $model;
         }
 

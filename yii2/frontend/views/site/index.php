@@ -1,12 +1,15 @@
+<?php
+use frontend\models\OlyGameInfoSearch;
+?>
+
 <div class="djaoyu19621_ind19" data-spm="EATalHBBJUvg" data-spm-max-idx="71">
     <div class="top_title">
-        <script src="https//r.img.cctvpic.com/photoAlbum/templet/common/DEPA1623745190871890/jquery.tinyscrollbar.js" type="text/javascript" charset="utf-8"></script>
         <span class="mklogo"></span>
         <span class="left_title">
             东京回顾
         </span>
         <div class="right_tit_list">
-            <a href="https://2020.cctv.com/medal_list/index.shtml?spm=0.P1MICI5m5UJV.EATalHBBJUvg.1" class="icon04">
+            <a href="index.php?r=site/medal" class="icon04">
                 奖牌榜
             </a>
             |<a href="https://2020.cctv.com/zgja/index.shtml?spm=0.P1MICI5m5UJV.EATalHBBJUvg.2" class="icon05">
@@ -179,192 +182,36 @@
                 <div class="con">
                     <ul id='games' style="width: 1530px; margin-left: 0px;">
                         <li>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/table_tennis/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.24">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/TTE-------------------------------.png" alt=""> </div>
-                                    <p>乒乓球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/badminton/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.25">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/BDM-------------------------------.png" alt=""> </div>
-                                    <p>羽毛球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/football/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.26">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/FBL-------------------------------.png" alt=""> </div>
-                                    <p>足球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/basketball/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.27">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/BKB-------------------------------.png" alt=""> </div>
-                                    <p>篮球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/3_basketball/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.28">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/BK3-------------------------------.png" alt=""> </div>
-                                    <p>三人篮球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/volleyball/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.29">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/VVO-------------------------------.png" alt=""> </div>
-                                    <p>排球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/beach_volleyball/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.30">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/VBV-------------------------------.png" alt=""> </div>
-                                    <p>沙滩排球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/golf/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.31">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/GLF-------------------------------.png" alt=""> </div>
-                                    <p>高尔夫</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/tennis/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.32">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/TEN-------------------------------.png" alt=""> </div>
-                                    <p>网球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/baseball_softball/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.33">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/BSB-------------------------------.png" alt=""> </div>
-                                    <p>棒球/垒球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/hockey/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.34">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/HOC-------------------------------.png" alt=""> </div>
-                                    <p>曲棍球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/handball/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.35">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/HBL-------------------------------.png" alt=""> </div>
-                                    <p>手球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/rugby/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.36">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/RUG-------------------------------.png" alt=""> </div>
-                                    <p>橄榄球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/water_polo/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.37">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/WPO-------------------------------.png" alt=""> </div>
-                                    <p>水球</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/swimming/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.38">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/SWM-------------------------------.png" alt=""> </div>
-                                    <p>游泳</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/diving/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.39">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/DIV-------------------------------.png" alt=""> </div>
-                                    <p>跳水</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/marathon_swimming/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.40">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/OWS-------------------------------.png" alt=""> </div>
-                                    <p>马拉松游泳</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/artistic_swimming/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.41">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/SWA-------------------------------.png" alt=""> </div>
-                                    <p>花样游泳</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/wrestling/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.42">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/WRE-------------------------------.png" alt=""> </div>
-                                    <p>摔跤</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/taekwondo/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.43">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/TKW-------------------------------.png" alt=""> </div>
-                                    <p>跆拳道</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/judo/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.44">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/JUD-------------------------------.png" alt=""> </div>
-                                    <p>柔道</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/boxing/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.45">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/BOX-------------------------------.png" alt=""> </div>
-                                    <p>拳击</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/karate/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.46">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/KTE-------------------------------.png" alt=""> </div>
-                                    <p>空手道</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/fencing/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.47">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/FEN-------------------------------.png" alt=""> </div>
-                                    <p>击剑</p>
-                                </a></div>
-                            </li>
-                            <li>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/cycling_road/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.48">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/CRD-------------------------------.png" alt=""> </div>
-                                    <p>公路自行车</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/cycling_track/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.49">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/CTR-------------------------------.png" alt=""> </div>
-                                    <p>场地自行车</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/cycling_mountain_bike/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.50">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/MTB-------------------------------.png" alt=""> </div>
-                                    <p>山地自行车</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/athletics/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.51">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/ATH-------------------------------.png" alt=""> </div>
-                                    <p>田径</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/triathlon/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.52">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/TRI-------------------------------.png" alt=""> </div>
-                                    <p>铁人三项</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/modern_pentathlon/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.53">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/MPN-------------------------------.png" alt=""> </div>
-                                    <p>现代五项</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/artistic_gymnastics/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.54">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/GAR-------------------------------.png" alt=""> </div>
-                                    <p>竞技体操</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/rhythmic_gymnastics/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.55">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/GRY-------------------------------.png" alt=""> </div>
-                                    <p>艺术体操</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/trampoline_gymnastics/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.56">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/GTR-------------------------------.png" alt=""> </div>
-                                    <p>蹦床</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/rowing/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.57">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/ROW-------------------------------.png" alt=""> </div>
-                                    <p>赛艇</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/sailing/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.58">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/SAL-------------------------------.png" alt=""> </div>
-                                    <p>帆船</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/canoe_slalom/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.59">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/CSL-------------------------------.png" alt=""> </div>
-                                    <p>皮划艇激流回旋</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/canoe_sprint/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.60">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/CSP-------------------------------.png" alt=""> </div>
-                                    <p>皮划艇静水</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/skateboarding/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.61">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/SKB-------------------------------.png" alt=""> </div>
-                                    <p>滑板</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/sport_climbing/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.62">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/CLB-------------------------------.png" alt=""> </div>
-                                    <p>运动攀岩</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/cycling_bmx_freestyle/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.63">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/BMF-------------------------------.png" alt=""> </div>
-                                    <p>自由式小轮车</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/cycling_bmx_racing/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.64">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/BMX-------------------------------.png" alt=""> </div>
-                                    <p>小轮车竞速</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/shooting/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.65">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/SHO-------------------------------.png" alt=""> </div>
-                                    <p>射击</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/archery/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.66">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/ARC-------------------------------.png" alt=""> </div>
-                                    <p>射箭</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/weightlifting/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.67">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/WLF-------------------------------.png" alt=""> </div>
-                                    <p>举重</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/equestrian/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.68">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/EQU-------------------------------.png" alt=""> </div>
-                                    <p>马术</p>
-                                </a></div>
-                            <div class="icon no_icon"> <a href="https://2020.cctv.com/events/surfing/?spm=0.P1MICI5m5UJV.EATalHBBJUvg.69">
-                                    <div class="img"> <img src="//p1.img.cctvpic.com/sports/data/olympic/iconBlue/SRF-------------------------------.png" alt=""> </div>
-                                    <p>冲浪</p>
-                                </a></div>
+                            <?php
+                                $searchModel = new OlyGameInfoSearch();
+                                $dataProvider = $searchModel->search(['page' => '0', 'pageSize' => '24']);
+                                $models = $dataProvider->getModels();
+                                foreach ($models as $model) {
+                                    $html = <<<EOT
+                                    <div class="icon no_icon"> <a href="">
+                                        <div class="img"> <img src="images/icon/{$model['game_code']}.png" style="height: 70px;"> </div>
+                                        <p>{$model['game_name_zh']}</p>
+                                    </a></div>
+EOT;
+                                    echo $html;
+                                }
+                            ?>
+                        </li>
+                        <li>
+                            <?php
+                                $searchModel = new OlyGameInfoSearch();
+                                $dataProvider = $searchModel->search(['page' => '1', 'pageSize' => '24']);
+                                $models = $dataProvider->getModels();
+                                foreach ($models as $model) {
+                                    $html = <<<EOT
+                                    <div class="icon no_icon"> <a href="">
+                                        <div class="img"> <img src="images/icon/{$model['game_code']}.png" style="height: 70px;"> </div>
+                                        <p>{$model['game_name_zh']}</p>
+                                    </a></div>
+EOT;
+                                    echo $html;
+                                }
+                            ?>
                         </li>
                     </ul>
                 </div>

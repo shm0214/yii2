@@ -4,31 +4,28 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\MedalSearch */
+/* @var $model app\models\OlyNewscommentSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="medal-search">
+<div class="oly-newscomment-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
         'method' => 'get',
-        'options' => [
-            'data-pjax' => 1
-        ],
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+    <?= $form->field($model, 'cmt_id') ?>
 
-    <?= $form->field($model, 'gold') ?>
+    <?= $form->field($model, 'cmt_userid') ?>
 
-    <?= $form->field($model, 'silver') ?>
+    <?= $form->field($model, 'cmt_date') ?>
 
-    <?= $form->field($model, 'bronze') ?>
+    <?= $form->field($model, 'cmt_content') ?>
 
-    <?= $form->field($model, 'total') ?>
+    <?= $form->field($model, 'cmt_newsid') ?>
 
-    <?php // echo $form->field($model, 'rank') ?>
+    <?php // echo $form->field($model, 'cmt_trashed') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

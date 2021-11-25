@@ -4,26 +4,15 @@ namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\Medal;
+use frontend\models\OlyMedalInfo;
+use frontend\models\OlyTeamInfo;
+use yii\helpers\VarDumper;
 
 /**
- * MedalSearch represents the model behind the search form of `frontend\models\Medal`.
+ * OlyMedalInfoSearch represents the model behind the search form of `frontend\models\OlyMedalInfo`.
  */
-class MedalSearch extends Medal
+class OlyMedalInfoSearch extends OlyMedalInfo
 {
-    public $name_zh;
-    public $path;
-
-    /**
-     * {@inheritdoc}
-     */
-    public function rules()
-    {
-        return [
-            [['id', 'gold', 'silver', 'bronze', 'total', 'rank'], 'integer'],
-            [['name_zh', 'flag_path'], 'safe'],
-        ];
-    }
 
     /**
      * {@inheritdoc}
@@ -43,12 +32,12 @@ class MedalSearch extends Medal
      */
     public function search($params)
     {
-        $query = Medal::find();
+        $query = OlyMedalInfo::find();
         $query->joinWith(['team']);
-        $query->select("medal.*, team.name_zh, team.path");
+        $query->select("oly_medal_info.*, oly_team_info.team_name_zh, oly_team_info.flag_path");
 
-        // add conditions that should always apply here
-
+        //VarDumper::dump($params);
+        //exit;
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
@@ -59,14 +48,6 @@ class MedalSearch extends Medal
 
         $this->load($params);
 
-        $dataProvider->sort->attributes['name_zh'] = [
-            'asc' => ['team.name_zh' => SORT_ASC],
-            'desc' => ['team.name_zh' => SORT_DESC],
-        ];
-
-        $dataProvider->getSort();
-
-
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
             // $query->where('0=1');
@@ -75,14 +56,13 @@ class MedalSearch extends Medal
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
+            'team_id' => $this->team_id,
             'gold' => $this->gold,
             'silver' => $this->silver,
             'bronze' => $this->bronze,
             'total' => $this->total,
             'rank' => $this->rank,
-            'name_zh' => $this->name_zh,
-            'path' => $this->path,
+            'status' => $this->status,
         ]);
 
         return $dataProvider;

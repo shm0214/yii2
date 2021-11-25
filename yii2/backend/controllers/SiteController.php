@@ -30,6 +30,11 @@ class SiteController extends Controller
                         'allow' => true,
                         'roles' => ['@'],
                     ],
+                    [
+                        'actions' => ['index','teamwork','personwork'],
+                        'allow' => true,
+                        'roles' => ['managePost'],
+                    ],
                 ],
             ],
             'verbs' => [
@@ -49,12 +54,6 @@ class SiteController extends Controller
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
-            ],
-            'test' => [
-                'class' => 'backend\controllers\Download',
-                'param1' => 'hello',
-                'param2' => 'world',
-                'param3' => '!!!',
             ],
         ];
     }
@@ -83,6 +82,12 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            if (!Yii::$app->user->can('managePost')) {
+                Yii::$app->user->logout();
+                return $this->render('alert',[
+                    'msg'=>'权限不足！',
+                ]); 
+            }
             return $this->goBack();
         } else {
             $model->password = '';
@@ -123,16 +128,5 @@ class SiteController extends Controller
     public function actionPersonwork()
     {
         return $this->render('personwork');
-    }
-
-    /** 
-     * Displays personal work page.
-     * 
-     * @return string
-     */
-    public function actionDownload()
-    {
-        $filename= Yii::$app->requset->get('name');
-        return Yii::$app->response->sendFile("files/","test.txt");
     }
 }

@@ -1,8 +1,6 @@
 <?php
-use frontend\models\MedalSearch;
-
+use frontend\models\OlyMedalInfoSearch;
 ?>
-
 
 <html>
 <div class="column_wrapper_aoyun2020" style="width: 1220px; margin: 0 auto;">
@@ -32,18 +30,18 @@ use frontend\models\MedalSearch;
                     </thead>
                     <tbody id="medal_list1">
                         <?php
-                            $searchModel = new MedalSearch();
+                            $searchModel = new OlyMedalInfoSearch();
                             $dataProvider = $searchModel->search(['page' => '0', 'pageSize' => '100']);
                             $models = $dataProvider->getModels();
                             $rank = 1;
                             foreach ($models as $model) {
-                                $flag_path = substr($model['path'], 5);
+                                $flag_path = substr($model['flag_path'], 5);
                                 $html = <<<EOT
                                 <tr class="white" style="display: table-row;">
                             <td name="td0">{$rank}</td>
                             <td name="td1" class="country"><a href="" target="_blank">
                                 <i class="flag"><img src="images/{$flag_path}"
-                                            alt="" style="margin-top: 8.5px;"></i>{$model['name_zh']}</a></td>
+                                            alt="" style="margin-top: 8.5px;"></i>{$model['team_name_zh']}</a></td>
                             <td name="td2">{$model['gold']}</td>
                             <td name="td3">{$model['silver']}</td>
                             <td name="td4">{$model['bronze']}</td>
@@ -63,43 +61,6 @@ EOT;
         </div>
 
     </div>
-
-
-
-    <div style="position:relative;" class="gg_coco" id="gg_coco_529"></div>
-    <script type="text/javascript">
-        function CCTV_20210719ad() {
-
-        }
-        CCTV_20210719ad.prototype._ajax = function(url, cb, fn, fner) {
-            $.ajax({
-                url: url,
-                dataType: "jsonp",
-                jsonpCallback: cb,
-                success: function(data) {
-                    fn(data);
-                },
-                error: function(data) {
-                    fner(data);
-                }
-            })
-        }
-        var CCTV_2021ad_0719 = new CCTV_20210719ad();
-        var ad_text_style =
-            '<div style="position: absolute; left: 0px; bottom: 0px; z-index: 9; padding: 0px 3px; font-size: 12px; line-height: 16px; color: rgb(255, 255, 255); background: rgb(0, 0, 0) none repeat scroll 0% 0%; opacity: 0.5;">广告</div>';
-        CCTV_2021ad_0719._ajax('//galaxy.bjcathay.com/s?z=cathay&c=529&op=1', 'cntvPczh_529', function(data) {
-            data.clickUrl = decodeURI(data.clickUrl);
-            console.log(data)
-            $("#gg_coco_529").html('<a style="position:relative;display:block;" href="' + data.clickUrl +
-                '"><img src="' + data.smallImg + '" alt="">' + ad_text_style +
-                '</a></div><div class="vspace" style="height:50px;">');
-
-            if (data.eventExposure != '') {
-                $("body").append('<iframe frameborder="0" width="0" height="0" scrolling="no" src="' + data
-                    .eventExposure + '" style="display:none;"></iframe>')
-            }
-        }, function(data) {})
-    </script>
 </div>
 
 </html>

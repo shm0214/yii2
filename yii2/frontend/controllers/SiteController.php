@@ -262,4 +262,9 @@ class SiteController extends Controller
     {
         return $this->render('finishAction');
     }
+
+    public function actionMedal()
+    {
+        return $this->render('medal');
+    }
 }

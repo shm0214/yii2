@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
 
 /**
- * This is the ActiveQuery class for [[Medal]].
+ * This is the ActiveQuery class for [[AuthAssignment]].
  *
- * @see Medal
+ * @see AuthAssignment
  */
-class MedalQuery extends \yii\db\ActiveQuery
+class AuthAssignmentQuery extends \yii\db\ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +16,7 @@ class MedalQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return Medal[]|array
+     * @return AuthAssignment[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class MedalQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return Medal|array|null
+     * @return AuthAssignment|array|null
      */
     public function one($db = null)
     {

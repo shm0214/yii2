@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
 
 /**
- * This is the ActiveQuery class for [[Team]].
+ * This is the ActiveQuery class for [[AuthItem]].
  *
- * @see Team
+ * @see AuthItem
  */
-class TeamQuery extends \yii\db\ActiveQuery
+class AuthItemQuery extends \yii\db\ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +16,7 @@ class TeamQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return Team[]|array
+     * @return AuthItem[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class TeamQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return Team|array|null
+     * @return AuthItem|array|null
      */
     public function one($db = null)
     {
