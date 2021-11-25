@@ -18,6 +18,10 @@ use Yii;
  */
 class Medal extends \yii\db\ActiveRecord
 {
+
+    public $name_zh;
+    public $path;
+
     /**
      * {@inheritdoc}
      */

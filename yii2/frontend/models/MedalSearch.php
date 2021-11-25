@@ -12,6 +12,8 @@ use frontend\models\Medal;
 class MedalSearch extends Medal
 {
     public $name_zh;
+    public $path;
+
     /**
      * {@inheritdoc}
      */
@@ -19,7 +21,7 @@ class MedalSearch extends Medal
     {
         return [
             [['id', 'gold', 'silver', 'bronze', 'total', 'rank'], 'integer'],
-            ['name_zh', 'safe'],
+            [['name_zh', 'flag_path'], 'safe'],
         ];
     }
 
@@ -43,12 +45,16 @@ class MedalSearch extends Medal
     {
         $query = Medal::find();
         $query->joinWith(['team']);
-        $query->select("medal.*, team.name_zh");
+        $query->select("medal.*, team.name_zh, team.path");
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'page' => $params['page'],
+                'pageSize' => $params['pageSize'],
+            ],
         ]);
 
         $this->load($params);
@@ -76,6 +82,7 @@ class MedalSearch extends Medal
             'total' => $this->total,
             'rank' => $this->rank,
             'name_zh' => $this->name_zh,
+            'path' => $this->path,
         ]);
 
         return $dataProvider;
