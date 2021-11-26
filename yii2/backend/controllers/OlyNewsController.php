@@ -2,8 +2,8 @@
 
 namespace backend\controllers;
 
-use app\models\OlyNews;
-use app\models\OlyNewsSearch;
+use frontend\models\OlyNews;
+use frontend\models\OlyNewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -125,7 +125,7 @@ class OlyNewsController extends PostController
      */
     protected function findModel($news_id)
     {
-        if (($model = OlyNews::findOne($id)) !== null) {
+        if (($model = OlyNews::findOne($news_id)) !== null) {
             return $model;
         }
 

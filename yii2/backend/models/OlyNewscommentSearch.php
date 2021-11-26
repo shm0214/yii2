@@ -1,10 +1,10 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\OlyNewscomment;
+use backend\models\OlyNewscomment;
 
 /**
  * OlyNewscommentSearch represents the model behind the search form of `app\models\OlyNewscomment`.
@@ -41,7 +41,13 @@ class OlyNewscommentSearch extends OlyNewscomment
     public function search($params)
     {
         $query = OlyNewscomment::find();
-        
+        $query->joinWith(['cmtUser']);
+        $query->select("oly_newscomment.*, user.username");
+        if (isset($params['news_id'])) {
+            $query->where('cmt_newsid = ' . $params['news_id']);
+            $query->addWhere('cmt_trashed == 0');
+        }
+
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
 use Yii;
 
@@ -12,6 +12,7 @@ use Yii;
  * @property string $news_content 新闻内容
  * @property string $news_cover 新闻封面url
  * @property int $news_id 新闻标识
+ * @property string|null $news_time
  *
  * @property OlyNewscomment[] $olyNewscomments
  */
@@ -33,6 +34,7 @@ class OlyNews extends \yii\db\ActiveRecord
         return [
             [['news_title', 'news_abstract', 'news_content', 'news_cover'], 'required'],
             [['news_content'], 'string'],
+            [['news_time'], 'safe'],
             [['news_title', 'news_cover'], 'string', 'max' => 100],
             [['news_abstract'], 'string', 'max' => 500],
         ];
@@ -49,6 +51,7 @@ class OlyNews extends \yii\db\ActiveRecord
             'news_content' => '新闻内容',
             'news_cover' => '新闻封面url',
             'news_id' => '新闻标识',
+            'news_time' => 'News Time',
         ];
     }
 

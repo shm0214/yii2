@@ -124,7 +124,7 @@ class OlyNewscommentController extends PostController
      */
     protected function findModel($cmt_id)
     {
-        if (($model = OlyNewscomment::findOne($id)) !== null) {
+        if (($model = OlyNewscomment::findOne($cmt_id)) !== null) {
             return $model;
         }
 

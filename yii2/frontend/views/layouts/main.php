@@ -129,7 +129,7 @@ use common\widgets\Alert;
                                                     <li style="height: 50px"><a href="index.php?r=result" style="line-height: 0px">比赛结果</a></li>
                                                     <li class="dropdown mega-dropdown" style="height: 50px">
                                                         <a href="index.php?r=site/medal" class="dropdown-toggle" data-toggle="dropdown" style="line-height: 0px" onclick="window.location.href='index.php?r=site/medal'">奖牌榜<span class="caret"></span></a>
-                                                        <ul class="dropdown-menu mega-dropdown-menu" style="top: 50px; background: #0e55b6; width: 65%;margin-left: 100px; height: 250px">
+                                                        <ul class="dropdown-menu mega-dropdown-menu" style="top: 50px; background: #0e55b6; width: 58%;margin-left: 100px; height: 250px">
                                                             <div class="top_paiM" style="margin-left: 10px">
                                                                 <h5><span id='not' class="title" data-spm-anchor-id="0.P1MICI5m5UJV.EalId75omwTo.i0">奖牌榜<a id="country" href="index.php?r=site/medal"><img src="images/topicon.png" /></a></span></h5>
                                                                 <span id='not' class="line" style="margin-top:10px"></span>
@@ -194,8 +194,8 @@ use common\widgets\Alert;
                                                                 </table>
                                                         </ul>
                                                     </li>
+                                                    <li style="height: 50px"><a href="index.php?r=news" style="line-height: 0px">新闻</a></li>
                                                     <li style="height: 50px"><a href="index.php?r=site/about" style="line-height: 0px">关于</a></li>
-                                                    <li style="height: 50px"><a href="blog.html" style="line-height: 0px">Blog</a></li>
                                                     <li style="height: 50px"><a href="contact.html" style="line-height: 0px">contact</a></li>
                                                 </ul>
                                             </div>
@@ -320,7 +320,7 @@ use common\widgets\Alert;
                                 <li><a href="index.php?r=site/index">主页</a></li>
                                 <li><a href="index.php?r=result">比赛结果</a></li>
                                 <li><a href="index.php?r=site/medal">奖牌榜</a></li>
-                                <li><a href="matche.html">Recent Matchs</a></li>
+                                <li><a href="index.php?r=news">新闻</a></li>
                                 <li><a href="blog.html">Our Blog</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>

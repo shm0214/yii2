@@ -6,6 +6,8 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use backend\models\UploadForm;
+use yii\web\UploadedFile;
 
 /**
  * Site controller
@@ -22,16 +24,16 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error','alert'],
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index','teamwork','personwork'],
+                        'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
                     [
-                        'actions' => ['index','teamwork','personwork'],
+                        'actions' => ['index','teamwork','personwork','upload'],
                         'allow' => true,
                         'roles' => ['managePost'],
                     ],
@@ -85,7 +87,9 @@ class SiteController extends Controller
             if (!Yii::$app->user->can('managePost')) {
                 Yii::$app->user->logout();
                 return $this->render('alert',[
-                    'msg'=>'权限不足！',
+                    'type'=>'danger',
+                    'head'=>'权限不足',
+                    'msg'=>'',
                 ]); 
             }
             return $this->goBack();
@@ -128,5 +132,27 @@ class SiteController extends Controller
     public function actionPersonwork()
     {
         return $this->render('personwork');
+    }
+
+    /** 
+     * Displays personal work page.
+     * 
+     * @return string
+     */
+    public function actionUpload()
+    {
+        $model = new UploadForm();
+
+        if (Yii::$app->request->isPost) {
+            $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
+            $path=$model->upload();
+            return $this->render('alert',[
+                'type'=>'success',
+                'head'=>'文件上传成功',
+                'msg'=> $path,
+            ]); 
+        }
+
+        return $this->render('upload', ['model' => $model]);
     }
 }

@@ -1,9 +1,10 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 use common\models\User;
+use frontend\models\OlyNews;
 
 /**
  * This is the model class for table "oly_newscomment".
