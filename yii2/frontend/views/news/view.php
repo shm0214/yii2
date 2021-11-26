@@ -30,7 +30,7 @@
             use yii\helpers\VarDumper;
 
             $searchModel = new OlyNewscommentSearch();
-            $dataProvider = $searchModel->search([]);
+            $dataProvider = $searchModel->search(['news_id' => $model['news_id']]);
             $models = $dataProvider->getModels();
             $cnt = 1;
             foreach ($models as $model) {

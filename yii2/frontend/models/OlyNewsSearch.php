@@ -43,6 +43,7 @@ class OlyNewsSearch extends OlyNews
         $query = OlyNews::find();
         if (isset($params['id']))
             $query->where('news_id=' . $params['id']);
+        $query->orderBy(['news_time' => SORT_DESC]);
 
         // add conditions that should always apply here
 

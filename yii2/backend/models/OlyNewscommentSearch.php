@@ -45,9 +45,9 @@ class OlyNewscommentSearch extends OlyNewscomment
         $query->select("oly_newscomment.*, user.username");
         if (isset($params['news_id'])) {
             $query->where('cmt_newsid = ' . $params['news_id']);
-            $query->addWhere('cmt_trashed == 0');
+            $query->andWhere('cmt_trashed = 0');
         }
-
+        $query->orderBy(['cmt_date' => SORT_ASC]);
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
