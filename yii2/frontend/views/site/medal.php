@@ -1,4 +1,5 @@
 <?php
+
 use frontend\models\OlyMedalInfoSearch;
 ?>
 
@@ -14,29 +15,21 @@ use frontend\models\OlyMedalInfoSearch;
                         <tr>
                             <th width="120">排名</th>
                             <th name="th1" width="434">国家/地区</th>
-                            <th name="th2" width="149"><img src="images/prize01.png" alt="">金牌<em class="fa fa-arrow-circle-o-up"
-                                    onclick="sortTable(2, 0)" style="cursor: pointer;"></em><em
-                                    class="fa fa-arrow-circle-o-down" onclick="sortTable(2, 1)" style="cursor: pointer;"></em></th>
-                            <th name="th3" width="149"><img src="images/prize02.png" alt="">银牌<em class="fa fa-arrow-circle-o-up"
-                                    onclick="sortTable(3, 0)" style="cursor: pointer;"></em><em
-                                    class="fa fa-arrow-circle-o-down" onclick="sortTable(3, 1)" style="cursor: pointer;"></em></th>
-                            <th name="th4" width="149"><img src="images/prize03.png" alt="">铜牌<em class="fa fa-arrow-circle-o-up"
-                                    onclick="sortTable(4, 0)" style="cursor: pointer;"></em><em
-                                    class="fa fa-arrow-circle-o-down" onclick="sortTable(4, 1)" style="cursor: pointer;"></em></th>
-                            <th name="th5" class="lastcell" width="150">总数<em class="fa fa-arrow-circle-o-up"
-                                    onclick="sortTable(5, 0)" style="cursor: pointer;"></em><em
-                                    class="fa fa-arrow-circle-o-down" onclick="sortTable(5, 1)" style="cursor: pointer;"></em></th>
+                            <th name="th2" width="149"><img src="images/prize01.png" alt="">金牌<em class="fa fa-arrow-circle-o-up" onclick="sortTable(2, 0)" style="cursor: pointer;"></em><em class="fa fa-arrow-circle-o-down" onclick="sortTable(2, 1)" style="cursor: pointer;"></em></th>
+                            <th name="th3" width="149"><img src="images/prize02.png" alt="">银牌<em class="fa fa-arrow-circle-o-up" onclick="sortTable(3, 0)" style="cursor: pointer;"></em><em class="fa fa-arrow-circle-o-down" onclick="sortTable(3, 1)" style="cursor: pointer;"></em></th>
+                            <th name="th4" width="149"><img src="images/prize03.png" alt="">铜牌<em class="fa fa-arrow-circle-o-up" onclick="sortTable(4, 0)" style="cursor: pointer;"></em><em class="fa fa-arrow-circle-o-down" onclick="sortTable(4, 1)" style="cursor: pointer;"></em></th>
+                            <th name="th5" class="lastcell" width="150">总数<em class="fa fa-arrow-circle-o-up" onclick="sortTable(5, 0)" style="cursor: pointer;"></em><em class="fa fa-arrow-circle-o-down" onclick="sortTable(5, 1)" style="cursor: pointer;"></em></th>
                         </tr>
                     </thead>
                     <tbody id="medal_list1">
                         <?php
-                            $searchModel = new OlyMedalInfoSearch();
-                            $dataProvider = $searchModel->search(['page' => '0', 'pageSize' => '100']);
-                            $models = $dataProvider->getModels();
-                            $rank = 1;
-                            foreach ($models as $model) {
-                                $flag_path = substr($model['flag_path'], 5);
-                                $html = <<<EOT
+                        $searchModel = new OlyMedalInfoSearch();
+                        $dataProvider = $searchModel->search(['page' => '0', 'pageSize' => '100']);
+                        $models = $dataProvider->getModels();
+                        $rank = 1;
+                        foreach ($models as $model) {
+                            $flag_path = substr($model['flag_path'], 5);
+                            $html = <<<EOT
                                 <tr class="white" style="display: table-row;">
                             <td name="td0">{$rank}</td>
                             <td name="td1" class="country"><a href="" target="_blank">
@@ -48,9 +41,9 @@ use frontend\models\OlyMedalInfoSearch;
                             <td name="td5">{$model['total']}</td>
                         </tr>
 EOT;
-                                $rank += 1;
-                                echo $html;
-                            }
+                            $rank += 1;
+                            echo $html;
+                        }
                         ?>
                     </tbody>
                 </table>
@@ -115,15 +108,15 @@ EOT;
         color: #e1c4a8;
     }
 
-    .Olympic_19626_gameData_con01 table thead tr th: last-child {
+    .Olympic_19626_gameData_con01 table thead tr th:last-child {
         border-right: none;
     }
 
-    .Olympic_19626_gameData_con01 table tbody tr: nth-child(odd) {
+    .Olympic_19626_gameData_con01 table tbody tr:nth-child(odd) {
         background: #f8eee2;
     }
 
-    .Olympic_19626_gameData_con01 table tbody tr: nth-child(even) {
+    .Olympic_19626_gameData_con01 table tbody tr:nth-child(even) {
         background: #f3e1c9;
     }
 
@@ -133,11 +126,11 @@ EOT;
         font-family: "Microsoft YaHei";
         font-size: 15px;
         color: #333333;
-        border-right: 1px solid # e1c4a8;
+        border-right: 1px solid #e1c4a8;
         border-bottom: 1px solid #e1c4a8;
     }
 
-    .Olympic_19626_gameData_con01 table tbody tr td: last-child {
+    .Olympic_19626_gameData_con01 table tbody tr td:last-child {
         border-right: none;
     }
 
@@ -147,7 +140,7 @@ EOT;
 
     .Olympic_19626_gameData_con01 table tbody tr td a:hover {
         text-decoration: none;
-        color: # b11c33;
+        color: #b11c33;
     }
 
     .Olympic_19626_gameData_con01 table tbody tr td i {
@@ -483,4 +476,9 @@ EOT;
             }
         }
     }
+
+
+    $(document).ready(function() {
+        document.querySelector('.info_title').scrollIntoView();
+    })
 </script>

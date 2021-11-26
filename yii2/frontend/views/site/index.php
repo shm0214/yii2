@@ -1,4 +1,5 @@
 <?php
+
 use frontend\models\OlyGameInfoSearch;
 ?>
 
@@ -15,7 +16,7 @@ use frontend\models\OlyGameInfoSearch;
             |<a href="https://2020.cctv.com/zgja/index.shtml?spm=0.P1MICI5m5UJV.EATalHBBJUvg.2" class="icon05">
                 中国骄傲
             </a>
-            |<a href="https://2020.cctv.com/events/index.shtml?spm=0.P1MICI5m5UJV.EATalHBBJUvg.3" class="icon02">
+            |<a href="index.php?r=result" class="icon02">
                 奥运项目
             </a>
             |<a href="https://2020.cctv.com/schedule/index.shtml?spm=0.P1MICI5m5UJV.EATalHBBJUvg.4" class="icon01">
@@ -40,7 +41,7 @@ use frontend\models\OlyGameInfoSearch;
             </div>
             <div class="menu" style="background: #f8eee2;height: 680px;">
                 <div class="scrollbox" id="scrollbox" style="height:680px">
-                    
+
                     <div class="viewport">
                         <div class="overview" style="top: 0px;">
                             <div class="mrbs">
@@ -48,119 +49,119 @@ use frontend\models\OlyGameInfoSearch;
                                     <li>
                                         <span class="pdmc">Day 1</span>
                                         <span class="brief">开幕式盛大举行
-                                                朱婷和赵帅担任中国代表团旗手
+                                            朱婷和赵帅担任中国代表团旗手
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 2</span>
                                         <span class="brief">杨倩射落首金
-                                                中国代表团首日收获3金傲视群雄
+                                            中国代表团首日收获3金傲视群雄
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 3</span>
                                         <span class="brief">中国女双3米板奥运5连冠
-                                                中国举重力士日进2金
+                                            中国举重力士日进2金
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 4</span>
                                         <span class="brief">跳水男子双人10米台意外失手
-                                                中国组合屈居亚军
+                                            中国组合屈居亚军
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 5</span>
                                         <span class="brief">中国射击揽2金“杨杨”得意
-                                                女子双人10米台6连冠
+                                            女子双人10米台6连冠
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 6</span>
                                         <span class="brief">女子四人双桨时隔13年再摘金
-                                                石智勇破纪录夺冠
+                                            石智勇破纪录夺冠
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 7</span>
                                         <span class="brief">中国女子4×200自接力破纪录问鼎
-                                                张雨霏日夺2金
+                                            张雨霏日夺2金
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 8</span>
                                         <span class="brief">中国代表团一日揽4金
-                                                国乒包揽男子单打冠亚军
+                                            国乒包揽男子单打冠亚军
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 9</span>
                                         <span class="brief">“不老军神”强势摘金
-                                                中国帆板时隔13年再度夺冠
+                                            中国帆板时隔13年再度夺冠
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 10</span>
                                         <span class="brief">巩立姣折桂终圆冠军梦
-                                                施廷懋与陈雨菲双双夺金
+                                            施廷懋与陈雨菲双双夺金
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 11</span>
                                         <span class="brief">夺金狂潮！中国代表团狂揽5金
-                                                打破2项世界纪录
+                                            打破2项世界纪录
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 12</span>
                                         <span class="brief">中国体操揽2金打赢翻身仗
-                                                男子3米板包揽冠亚军
+                                            男子3米板包揽冠亚军
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 13</span>
                                         <span class="brief">中国代表团再入1银
-                                                花样游泳获得双人项目获亚军
+                                            花样游泳获得双人项目获亚军
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 14</span>
                                         <span class="brief">跳水梦之队再揽2金
-                                                中国女乒横扫日本获团体冠军
+                                            中国女乒横扫日本获团体冠军
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 15</span>
                                         <span class="brief">中国男乒团体赛摘金
-                                                刘诗颖一掷定乾坤标枪问鼎
+                                            刘诗颖一掷定乾坤标枪问鼎
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 16</span>
                                         <span class="brief">中国女双划艇取突破夺冠
-                                                男子10米台包揽冠亚军
+                                            男子10米台包揽冠亚军
                                         </span>
                                         <div class="clear"></div>
                                     </li>
                                     <li>
                                         <span class="pdmc">Day 17</span>
                                         <span class="brief">闭幕！中国代表团38金收官
-                                                苏炳添任闭幕式旗手
+                                            苏炳添任闭幕式旗手
                                         </span>
                                         <div class="clear"></div>
                                     </li>
@@ -176,41 +177,41 @@ use frontend\models\OlyGameInfoSearch;
                 <span class="option"><i>
                         奥运项目
                     </i></span>
-                
+
             </div>
             <div class="menuXiangmu" id="menuXiangmu1" style="height:682px">
                 <div class="con">
                     <ul id='games' style="width: 1530px; margin-left: 0px;">
                         <li>
                             <?php
-                                $searchModel = new OlyGameInfoSearch();
-                                $dataProvider = $searchModel->search(['page' => '0', 'pageSize' => '24']);
-                                $models = $dataProvider->getModels();
-                                foreach ($models as $model) {
-                                    $html = <<<EOT
-                                    <div class="icon no_icon"> <a href="">
+                            $searchModel = new OlyGameInfoSearch();
+                            $dataProvider = $searchModel->search(['page' => '0', 'pageSize' => '24']);
+                            $models = $dataProvider->getModels();
+                            foreach ($models as $model) {
+                                $html = <<<EOT
+                                    <div class="icon no_icon"> <a href="index.php?r=result/view&game={$model['game_code']}">
                                         <div class="img"> <img src="images/icon/{$model['game_code']}.png" style="height: 70px;"> </div>
                                         <p>{$model['game_name_zh']}</p>
                                     </a></div>
 EOT;
-                                    echo $html;
-                                }
+                                echo $html;
+                            }
                             ?>
                         </li>
                         <li>
                             <?php
-                                $searchModel = new OlyGameInfoSearch();
-                                $dataProvider = $searchModel->search(['page' => '1', 'pageSize' => '24']);
-                                $models = $dataProvider->getModels();
-                                foreach ($models as $model) {
-                                    $html = <<<EOT
+                            $searchModel = new OlyGameInfoSearch();
+                            $dataProvider = $searchModel->search(['page' => '1', 'pageSize' => '24']);
+                            $models = $dataProvider->getModels();
+                            foreach ($models as $model) {
+                                $html = <<<EOT
                                     <div class="icon no_icon"> <a href="">
                                         <div class="img"> <img src="images/icon/{$model['game_code']}.png" style="height: 70px;"> </div>
                                         <p>{$model['game_name_zh']}</p>
                                     </a></div>
 EOT;
-                                    echo $html;
-                                }
+                                echo $html;
+                            }
                             ?>
                         </li>
                     </ul>
@@ -218,7 +219,7 @@ EOT;
                 <a class="left_btn" onclick="change()" style="top: 310px; left: -10px"></a>
                 <a class="right_btn" onclick="change()" style="top: 310px; right: -10px"></a>
                 <script>
-                    function change(){
+                    function change() {
                         var other = $('#games li:first-child')
                         $('#games li:last-child').after($('#games li:first-child').clone())
                         other.remove()

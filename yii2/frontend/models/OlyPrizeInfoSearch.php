@@ -4,13 +4,23 @@ namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\OlyMedalInfo;
+use frontend\models\OlyPrizeInfo;
 
 /**
- * OlyMedalInfoSearch represents the model behind the search form of `frontend\models\OlyMedalInfo`.
+ * OlyPrizeInfoSearch represents the model behind the search form of `frontend\models\OlyPrizeInfo`.
  */
-class OlyMedalInfoSearch extends OlyMedalInfo
+class OlyPrizeInfoSearch extends OlyPrizeInfo
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function rules()
+    {
+        return [
+            [['game_id', 'type_id', 'team_id', 'group_id', 'rank', 'status'], 'integer'],
+            [['athlete_id'], 'safe'],
+        ];
+    }
 
     /**
      * {@inheritdoc}
@@ -30,21 +40,22 @@ class OlyMedalInfoSearch extends OlyMedalInfo
      */
     public function search($params)
     {
-        $query = OlyMedalInfo::find();
+        $query = OlyPrizeInfo::find();
         $query->joinWith(['team']);
-        $query->select("oly_medal_info.*, oly_team_info.team_name_zh, oly_team_info.flag_path");
+        $query->select("oly_prize_info.*, oly_team_info.team_name_zh, oly_team_info.flag_path");
+        $query->where('type_id=' . $params['type_id'] . ' and rank>0');
+        if (isset($params['rank']))
+            $query->andWhere('rank<4');
+        $query->orderBy(['rank' => SORT_ASC]);
+        // add conditions that should always apply here
 
-        //VarDumper::dump($params);
-        //exit;
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'pagination' => [
-                'page' => $params['page'],
-                'pageSize' => $params['pageSize'],
-            ],
         ]);
 
         $this->load($params);
+
+
 
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
@@ -54,14 +65,15 @@ class OlyMedalInfoSearch extends OlyMedalInfo
 
         // grid filtering conditions
         $query->andFilterWhere([
+            'game_id' => $this->game_id,
+            'type_id' => $this->type_id,
             'team_id' => $this->team_id,
-            'gold' => $this->gold,
-            'silver' => $this->silver,
-            'bronze' => $this->bronze,
-            'total' => $this->total,
+            'group_id' => $this->group_id,
             'rank' => $this->rank,
             'status' => $this->status,
         ]);
+
+        $query->andFilterWhere(['like', 'athlete_id', $this->athlete_id]);
 
         return $dataProvider;
     }

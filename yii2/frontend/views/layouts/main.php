@@ -1,4 +1,5 @@
 <?php
+
 use common\widgets\Alert;
 
 ?>
@@ -8,7 +9,7 @@ use common\widgets\Alert;
 <html lang="en">
 <!-- Basic -->
 <meta charset="utf-8">
-<?php $this->registerCsrfMetaTags();?>
+<?php $this->registerCsrfMetaTags(); ?>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Mobile Metas -->
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -29,9 +30,7 @@ use common\widgets\Alert;
 <!-- Custom CSS -->
 <link rel="stylesheet" href="css/custom.css">
 <!-- font family -->
-<link
-    href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 <!-- end font family -->
 <link rel="stylesheet" href="css/3dslider.css" />
 <script src="js/jquery-1.11.1.min.js"></script>
@@ -56,8 +55,7 @@ use common\widgets\Alert;
                         <div class="col-md-6">
                             <div class="full">
                                 <div class="logo">
-                                    <a href="index.html"><img src="images/logo_color.svg" /><img
-                                            src="images/logo_tokyo.png" height=100 width=100></a>
+                                    <a href="index.html"><img src="images/logo_color.svg" /><img src="images/logo_tokyo.png" height=100 width=100></a>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +101,7 @@ use common\widgets\Alert;
                             </li>
                             </ul>';
                                 }
-                            ?>
+                                ?>
                                 <!-- end button section -->
                             </div>
                         </div>
@@ -117,8 +115,7 @@ use common\widgets\Alert;
                                     <div class="menu">
                                         <nav class="navbar navbar-inverse">
                                             <div class="navbar-header">
-                                                <button class="navbar-toggle" type="button" data-toggle="collapse"
-                                                    data-target=".js-navbar-collapse">
+                                                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
                                                     <span class="sr-only">Toggle navigation</span>
                                                     <span class="icon-bar"></span>
                                                     <span class="icon-bar"></span>
@@ -128,18 +125,11 @@ use common\widgets\Alert;
                                             </div>
                                             <div class="collapse navbar-collapse js-navbar-collapse">
                                                 <ul class="nav navbar-nav" style="height: 50px">
-                                                    <li class="active" style="height: 50px"><a
-                                                            href="index.php?r=site/index"
-                                                            style="line-height: 0px">主页</a></li>
-                                                    <li style="height: 50px"><a href="index.php?r=site/about"
-                                                            style="line-height: 0px">关于</a></li>
-                                                    <li style="height: 50px"><a href="news.html"
-                                                            style="line-height: 0px">News</a></li>
+                                                    <li class="active" style="height: 50px"><a href="index.php?r=site/index" style="line-height: 0px">主页</a></li>
+                                                    <li style="height: 50px"><a href="index.php?r=result" style="line-height: 0px">比赛结果</a></li>
                                                     <li class="dropdown mega-dropdown" style="height: 50px">
-                                                        <a href="index.php?r=site/medal" class="dropdown-toggle"
-                                                            data-toggle="dropdown" style="line-height: 0px" onclick="window.location.href='index.php?r=site/medal'">奖牌榜<span
-                                                                class="caret"></span></a>
-                                                        <ul class="dropdown-menu mega-dropdown-menu" style="top: 50px; background: #0e55b6; width: 58%;margin-left: 100px; height: 250px">
+                                                        <a href="index.php?r=site/medal" class="dropdown-toggle" data-toggle="dropdown" style="line-height: 0px" onclick="window.location.href='index.php?r=site/medal'">奖牌榜<span class="caret"></span></a>
+                                                        <ul class="dropdown-menu mega-dropdown-menu" style="top: 50px; background: #0e55b6; width: 65%;margin-left: 100px; height: 250px">
                                                             <div class="top_paiM" style="margin-left: 10px">
                                                                 <h5><span id='not' class="title" data-spm-anchor-id="0.P1MICI5m5UJV.EalId75omwTo.i0">奖牌榜<a id="country" href="index.php?r=site/medal"><img src="images/topicon.png" /></a></span></h5>
                                                                 <span id='not' class="line" style="margin-top:10px"></span>
@@ -149,28 +139,20 @@ use common\widgets\Alert;
                                                                             <th>名次</th>
                                                                             <th class="country">国家/地区</th>
                                                                             <th>
-                                                                                <img src="images/jiangjin.png"
-                                                                                    alt="">
+                                                                                <img src="images/jiangjin.png" alt="">
                                                                             </th>
                                                                             <th>
-                                                                                <img src="images/jiangyin.png"
-                                                                                    alt="">
+                                                                                <img src="images/jiangyin.png" alt="">
                                                                             </th>
                                                                             <th>
-                                                                                <img src="images/jiangtong.png"
-                                                                                    alt="">
+                                                                                <img src="images/jiangtong.png" alt="">
                                                                             </th>
                                                                             <th>总</th>
                                                                         </tr>
 
                                                                         <tr>
                                                                             <td>1</td>
-                                                                            <td class="country"><a id="country"
-                                                                                    href="//2020.cctv.com/medal_list/details/index.shtml?spm=0.P1MICI5m5UJV.EalId75omwTo.2&amp;countryid=USA"
-                                                                                    ><i
-                                                                                        class="flag"><img
-                                                                                            src="images/flag/US.png"
-                                                                                            ></i> 美国</a></td>
+                                                                            <td class="country"><a id="country" href="//2020.cctv.com/medal_list/details/index.shtml?spm=0.P1MICI5m5UJV.EalId75omwTo.2&amp;countryid=USA"><i class="flag"><img src="images/flag/US.png"></i> 美国</a></td>
                                                                             <td>39</td>
                                                                             <td>41</td>
                                                                             <td>33</td>
@@ -178,12 +160,7 @@ use common\widgets\Alert;
                                                                         </tr>
                                                                         <tr class="paiM_high">
                                                                             <td>2</td>
-                                                                            <td class="country"><a id="country"
-                                                                                    href="//2020.cctv.com/medal_list/details/index.shtml?countryid=CHN"
-                                                                                    ><i
-                                                                                        class="flag"><img
-                                                                                            src="images/flag/CN.png"
-                                                                                            alt=""></i> 中国</a></td>
+                                                                            <td class="country"><a id="country" href="//2020.cctv.com/medal_list/details/index.shtml?countryid=CHN"><i class="flag"><img src="images/flag/CN.png" alt=""></i> 中国</a></td>
                                                                             <td>38</td>
                                                                             <td>32</td>
                                                                             <td>18</td>
@@ -191,12 +168,7 @@ use common\widgets\Alert;
                                                                         </tr>
                                                                         <tr>
                                                                             <td>3</td>
-                                                                            <td class="country"><a id="country"
-                                                                                    href="//2020.cctv.com/medal_list/details/index.shtml?countryid=JPN"
-                                                                                    ><i
-                                                                                        class="flag"><img
-                                                                                            src="images/flag/JP.png"
-                                                                                            alt=""></i> 日本</a></td>
+                                                                            <td class="country"><a id="country" href="//2020.cctv.com/medal_list/details/index.shtml?countryid=JPN"><i class="flag"><img src="images/flag/JP.png" alt=""></i> 日本</a></td>
                                                                             <td>27</td>
                                                                             <td>14</td>
                                                                             <td>17</td>
@@ -204,12 +176,7 @@ use common\widgets\Alert;
                                                                         </tr>
                                                                         <tr>
                                                                             <td>4</td>
-                                                                            <td class="country"><a id="country"
-                                                                                    href="//2020.cctv.com/medal_list/details/index.shtml?countryid=GBR"
-                                                                                    ><i
-                                                                                        class="flag"><img
-                                                                                            src="images/flag/GB.png"
-                                                                                            alt=""></i> 英国</a></td>
+                                                                            <td class="country"><a id="country" href="//2020.cctv.com/medal_list/details/index.shtml?countryid=GBR"><i class="flag"><img src="images/flag/GB.png" alt=""></i> 英国</a></td>
                                                                             <td>22</td>
                                                                             <td>21</td>
                                                                             <td>22</td>
@@ -217,12 +184,7 @@ use common\widgets\Alert;
                                                                         </tr>
                                                                         <tr>
                                                                             <td>5</td>
-                                                                            <td class="country"><a id="country"
-                                                                                    href="//2020.cctv.com/medal_list/details/index.shtml?countryid=ROC"
-                                                                                    ><i
-                                                                                        class="flag"><img
-                                                                                            src="images/flag/ROC.png"
-                                                                                            alt=""></i> ROC</a></td>
+                                                                            <td class="country"><a id="country" href="//2020.cctv.com/medal_list/details/index.shtml?countryid=ROC"><i class="flag"><img src="images/flag/ROC.png" alt=""></i> ROC</a></td>
                                                                             <td>17</td>
                                                                             <td>7</td>
                                                                             <td>22</td>
@@ -232,10 +194,9 @@ use common\widgets\Alert;
                                                                 </table>
                                                         </ul>
                                                     </li>
-                                                    <li style="height: 50px"><a href="blog.html"
-                                                            style="line-height: 0px">Blog</a></li>
-                                                    <li style="height: 50px"><a href="contact.html"
-                                                            style="line-height: 0px">contact</a></li>
+                                                    <li style="height: 50px"><a href="index.php?r=site/about" style="line-height: 0px">关于</a></li>
+                                                    <li style="height: 50px"><a href="blog.html" style="line-height: 0px">Blog</a></li>
+                                                    <li style="height: 50px"><a href="contact.html" style="line-height: 0px">contact</a></li>
                                                 </ul>
                                             </div>
                                             <!-- /.nav-collapse -->
@@ -264,8 +225,7 @@ use common\widgets\Alert;
                             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                 <div class="slider-contant" data-animation="animated fadeInRight">
-                                    <h3 style="line-height:1.2">2020 东京奥运会<br> <span
-                                            class="color-yellow">2021.7.23-2021.8.8</span><br>情同与共</h3>
+                                    <h3 style="line-height:1.2">2020 东京奥运会<br> <span class="color-yellow">2021.7.23-2021.8.8</span><br>情同与共</h3>
 
                                 </div>
                             </div>
@@ -278,8 +238,7 @@ use common\widgets\Alert;
                             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                 <div class="slider-contant" data-animation="animated fadeInRight">
-                                    <h3 style="line-height:1.2">2020 东京奥运会<br> <span
-                                            class="color-yellow">2021.7.23-2021.8.8</span><br>情同与共</h3>
+                                    <h3 style="line-height:1.2">2020 东京奥运会<br> <span class="color-yellow">2021.7.23-2021.8.8</span><br>情同与共</h3>
 
                                 </div>
                             </div>
@@ -292,8 +251,7 @@ use common\widgets\Alert;
                             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                 <div class="slider-contant" data-animation="animated fadeInRight">
-                                    <h3 style="line-height:1.2">2020 东京奥运会<br> <span
-                                            class="color-yellow">2021.7.23-2021.8.8</span><br>情同与共</h3>
+                                    <h3 style="line-height:1.2">2020 东京奥运会<br> <span class="color-yellow">2021.7.23-2021.8.8</span><br>情同与共</h3>
 
                                 </div>
                             </div>
@@ -315,8 +273,7 @@ use common\widgets\Alert;
                                     color: white
                                 }
                             </style>
-                            <a class="typewrite" data-period="2000"
-                                data-type='[ "2020东京奥运会 2021年7月23日-2021年8月8日 情同与共 United by Emotion 感動で、私たちはひとつになる"]'>
+                            <a class="typewrite" data-period="2000" data-type='[ "2020东京奥运会 2021年7月23日-2021年8月8日 情同与共 United by Emotion 感動で、私たちはひとつになる"]'>
                                 <span class="wrap"></span>
                             </a>
                         </h1 <span class="wrap"></span>
@@ -332,7 +289,7 @@ use common\widgets\Alert;
 
 
 
-    <?=$content?>
+    <?= $content ?>
 
     <footer id="footer" class="footer" style="background: #0e55b6; margin-top: 30px">
         <div class="container" style="width:1400px">
@@ -341,11 +298,9 @@ use common\widgets\Alert;
                     <div class="full">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="https://www.nankai.edu.cn/"><img src="images/nankai.png"
-                                        style="width: 300px" /></a>
+                                <a href="https://www.nankai.edu.cn/"><img src="images/nankai.png" style="width: 300px" /></a>
                             </div>
-                            <p style="font-size: larger">南开大学<a href="http://courseware.nkdbis.cn/#/step-1"
-                                    style="color:white;">互联网数据库开发</a>课程设计</p>
+                            <p style="font-size: larger">南开大学<a href="http://courseware.nkdbis.cn/#/step-1" style="color:white;">互联网数据库开发</a>课程设计</p>
                             <ul class="social-icons style-4 pull-left">
                                 <li><a class="github" href="https://gitee.com/internet-work/InternetWork
 
@@ -363,7 +318,7 @@ use common\widgets\Alert;
                             <h3 style="border-bottom-color: white;">导航</h3>
                             <ul class="footer-menu">
                                 <li><a href="index.php?r=site/index">主页</a></li>
-                                <li><a href="index.php?r=site/about">关于</a></li>
+                                <li><a href="index.php?r=result">比赛结果</a></li>
                                 <li><a href="index.php?r=site/medal">奖牌榜</a></li>
                                 <li><a href="matche.html">Recent Matchs</a></li>
                                 <li><a href="blog.html">Our Blog</a></li>
@@ -378,8 +333,7 @@ use common\widgets\Alert;
                             <h3 style="border-bottom-color: white;">联系我们</h3>
                             <ul class="address-list">
                                 <li><i class="fa fa-map-marker"></i>天津海河教育园区同砚路38号 [300350]</li>
-                                <li><i class="fa fa-github"></i><a href="https://github.com/shm0214"
-                                        style="color:white;">shm0214</a></li>
+                                <li><i class="fa fa-github"></i><a href="https://github.com/shm0214" style="color:white;">shm0214</a></li>
                                 <li><i style="font-size:20px;top:5px;" class="fa fa-envelope"></i>shm190813@gmail.com
                                 </li>
                             </ul>

@@ -11,6 +11,7 @@ use Yii;
  * @property string $game_name_en 大项的英文名称
  * @property string $game_name_zh 大项的中文名称
  * @property string $game_code
+ * @property string $game_introduction
  * @property int|null $status
  *
  * @property OlyPrizeInfo[] $olyPrizeInfos
@@ -24,18 +25,6 @@ class OlyGameInfo extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return '{{%oly_game_info}}';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function rules()
-    {
-        return [
-            [['game_name_en', 'game_name_zh', 'game_code'], 'required'],
-            [['status'], 'integer'],
-            [['game_name_en', 'game_name_zh', 'game_code'], 'string', 'max' => 50],
-        ];
     }
 
     /**
@@ -79,5 +68,10 @@ class OlyGameInfo extends \yii\db\ActiveRecord
     public static function find()
     {
         return new OlyGameInfoQuery(get_called_class());
+    }
+
+    public static function findByGameCode($gameCode)
+    {
+        return static::findOne(['game_code' => $gameCode]);
     }
 }
