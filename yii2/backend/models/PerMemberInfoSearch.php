@@ -1,10 +1,10 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\PerMemberInfo;
+use backend\models\PerMemberInfo;
 
 /**
  * PerMemberInfoSearch represents the model behind the search form of `app\models\PerMemberInfo`.
@@ -18,7 +18,7 @@ class PerMemberInfoSearch extends PerMemberInfo
     {
         return [
             [['id'], 'integer'],
-            [['name', 'introduction', 'image_path'], 'safe'],
+            [['sid', 'name', 'introduction', 'image_path'], 'safe'],
         ];
     }
 
@@ -61,7 +61,8 @@ class PerMemberInfoSearch extends PerMemberInfo
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
+        $query->andFilterWhere(['like', 'sid', $this->sid])
+            ->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'introduction', $this->introduction])
             ->andFilterWhere(['like', 'image_path', $this->image_path]);
 

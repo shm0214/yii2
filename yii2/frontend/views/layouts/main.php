@@ -65,9 +65,9 @@ use common\widgets\Alert;
                                 <ul class="social-icons pull-left">
                                     <li><a class="github" href="https://gitee.com/internet-work/InternetWork
 "><i class="fa fa-github"></i></a></li>
-                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
-                                    <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    <li><a class="twitter" href="https://twitter.com/Tokyo2020jp"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="youtube" href="https://www.youtube.com/c/tokyo2020"><i class="fa fa-youtube-play"></i></a></li>
+                                    <li><a class="pinterest" href="https://weibo.com/tokyo2020official?is_hot=1"><i class="fa fa-weibo"></i></a></li>
                                 </ul>
                                 <!-- end social icon -->
                                 <!-- button section -->
@@ -196,7 +196,7 @@ use common\widgets\Alert;
                                                     </li>
                                                     <li style="height: 50px"><a href="index.php?r=news" style="line-height: 0px">新闻</a></li>
                                                     <li style="height: 50px"><a href="index.php?r=site/about" style="line-height: 0px">关于</a></li>
-                                                    <li style="height: 50px"><a href="contact.html" style="line-height: 0px">contact</a></li>
+                                                    <li style="height: 50px"><a href="index.php?r=site/contact" style="line-height: 0px">联系我们</a></li>
                                                 </ul>
                                             </div>
                                             <!-- /.nav-collapse -->
@@ -300,14 +300,13 @@ use common\widgets\Alert;
                             <div class="footer-logo">
                                 <a href="https://www.nankai.edu.cn/"><img src="images/nankai.png" style="width: 300px" /></a>
                             </div>
-                            <p style="font-size: larger">南开大学<a href="http://courseware.nkdbis.cn/#/step-1" style="color:white;">互联网数据库开发</a>课程设计</p>
+                            <p style="font-size: larger;color:white">南开大学<a href="http://courseware.nkdbis.cn/#/step-1" style="color:white;">互联网数据库开发</a>课程设计</p>
                             <ul class="social-icons style-4 pull-left">
                                 <li><a class="github" href="https://gitee.com/internet-work/InternetWork
-
 "><i class="fa fa-github"></i></a></li>
-                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
-                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                <li><a class="twitter" href="https://twitter.com/Tokyo2020jp"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="youtube" href="https://www.youtube.com/c/tokyo2020"><i class="fa fa-youtube-play"></i></a></li>
+                                <li><a class="pinterest" href="https://weibo.com/tokyo2020official?is_hot=1"><i class="fa fa-weibo"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -321,8 +320,8 @@ use common\widgets\Alert;
                                 <li><a href="index.php?r=result">比赛结果</a></li>
                                 <li><a href="index.php?r=site/medal">奖牌榜</a></li>
                                 <li><a href="index.php?r=news">新闻</a></li>
-                                <li><a href="blog.html">Our Blog</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="index.php?r=site/about">关于</a></li>
+                                <li><a href="index.php?r=site/contact">联系我们</a></li>
                             </ul>
                         </div>
                     </div>
@@ -349,7 +348,7 @@ use common\widgets\Alert;
         </div>
         <div class="footer-bottom" style="border-top-color: white;background: #0e55b6;border-bottom-color: white;">
             <div class="container">
-                <p>Copyright © 2021 Powered by <a href="https://www.yiiframework.com/" target="_blank">Yii2</a></p>
+                <p style="color: white">Copyright © 2021 Powered by <a href="https://www.yiiframework.com/" target="_blank">Yii2</a></p>
             </div>
         </div>
     </footer>

@@ -1,15 +1,16 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 
 /**
  * This is the model class for table "per_member_info".
  *
- * @property int $id 成员的编号
- * @property string|null $name 成员的姓名
- * @property string|null $introduction 成员的介绍
+ * @property int $id 成员编号
+ * @property string|null $sid 学号
+ * @property string|null $name 姓名
+ * @property string|null $introduction 成员介绍
  * @property string|null $image_path 图片路径
  */
 class PerMemberInfo extends \yii\db\ActiveRecord
@@ -31,6 +32,7 @@ class PerMemberInfo extends \yii\db\ActiveRecord
             [['id'], 'required'],
             [['id'], 'integer'],
             [['name', 'introduction'], 'string'],
+            [['sid'], 'string', 'max' => 7],
             [['image_path'], 'string', 'max' => 255],
             [['id'], 'unique'],
         ];
@@ -42,9 +44,10 @@ class PerMemberInfo extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => '成员的编号',
-            'name' => '成员的姓名',
-            'introduction' => '成员的介绍',
+            'id' => '成员编号',
+            'sid' => '学号',
+            'name' => '姓名',
+            'introduction' => '成员介绍',
             'image_path' => '图片路径',
         ];
     }

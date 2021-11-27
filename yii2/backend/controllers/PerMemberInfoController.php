@@ -2,20 +2,16 @@
 
 namespace backend\controllers;
 
-use app\models\PerMemberInfo;
-use app\models\PerMemberInfoSearch;
+use backend\models\PerMemberInfo;
+use backend\models\PerMemberInfoSearch;
 use yii\web\Controller;
-use backend\controllers\AdminController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
-use Yii;
-use yii\filters\AccessControl;
 
 /**
  * PerMemberInfoController implements the CRUD actions for PerMemberInfo model.
  */
-class PerMemberInfoController extends AdminController
+class PerMemberInfoController extends Controller
 {
     /**
      * @inheritDoc
@@ -30,7 +26,7 @@ class PerMemberInfoController extends AdminController
                     'actions' => [
                         'delete' => ['POST'],
                     ],
-                ],        
+                ],
             ]
         );
     }
@@ -52,7 +48,7 @@ class PerMemberInfoController extends AdminController
 
     /**
      * Displays a single PerMemberInfo model.
-     * @param int $id 成员的编号
+     * @param int $id 成员编号
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -88,7 +84,7 @@ class PerMemberInfoController extends AdminController
     /**
      * Updates an existing PerMemberInfo model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param int $id 成员的编号
+     * @param int $id 成员编号
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -108,7 +104,7 @@ class PerMemberInfoController extends AdminController
     /**
      * Deletes an existing PerMemberInfo model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param int $id 成员的编号
+     * @param int $id 成员编号
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -122,7 +118,7 @@ class PerMemberInfoController extends AdminController
     /**
      * Finds the PerMemberInfo model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param int $id 成员的编号
+     * @param int $id 成员编号
      * @return PerMemberInfo the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */

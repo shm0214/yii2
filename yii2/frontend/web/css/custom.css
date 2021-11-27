@@ -1185,7 +1185,7 @@ section.main-heading h2::after {
 .testimonial img {
     max-width: 100%;
 }
-p:not(#t) {
+p:not(#t, #n) {
     font-size: 15px;
     text-align: center;
     color: #333;
@@ -1460,7 +1460,7 @@ section.main-heading .dark-section h2 {
 .testimonial-slider {
     float: left;
     width: 80%;
-    background: #fff;
+    background: #ffffffbd;
     margin: 40px 10% 0 10%;
     padding: 40px 0;
 }
@@ -1690,7 +1690,7 @@ section#contant .blog-sidebar div.category-menu li span {
     float: left;
     width: 100%;
 }
-#contactform ul li input.thbg-color {
+input.thbg-color {
     background: #d8302f;
     border: none;
     color: #fff;
@@ -1699,8 +1699,8 @@ section#contant .blog-sidebar div.category-menu li span {
     font-size: 16px;
     transition: ease all 0.5s;
 }
-#contactform ul li input.thbg-color:hover,
-#contactform ul li input.thbg-color:focus {
+input.thbg-color:hover,
+input.thbg-color:focus {
     background: #111;
 }
 section#contant .blog-sidebar div.category-menu ul li:last-child {

@@ -1,13 +1,13 @@
 <?php
 
-namespace backend\models;
+namespace frontend\models;
 
 /**
- * This is the ActiveQuery class for [[PerMemberInfo]].
+ * This is the ActiveQuery class for [[OlyContactForm]].
  *
- * @see PerMemberInfo
+ * @see OlyContactForm
  */
-class PerMemberInfoQuery extends \yii\db\ActiveQuery
+class OlyContactFormQuery extends \yii\db\ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +16,7 @@ class PerMemberInfoQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return PerMemberInfo[]|array
+     * @return OlyContactForm[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class PerMemberInfoQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return PerMemberInfo|array|null
+     * @return OlyContactForm|array|null
      */
     public function one($db = null)
     {
