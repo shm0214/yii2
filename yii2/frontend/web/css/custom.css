@@ -1185,9 +1185,15 @@ section.main-heading h2::after {
 .testimonial img {
     max-width: 100%;
 }
-p {
+p:not(#t) {
     font-size: 15px;
     text-align: center;
+    color: #333;
+    line-height: 28px;
+}
+p#t {
+    font-size: 15px;
+    text-align: left;
     color: #333;
     line-height: 28px;
 }

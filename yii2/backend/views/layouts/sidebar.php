@@ -37,12 +37,13 @@
                         ['label' => '作业展示', 'header' => true],
                         ['label' => '团队作业', 'icon' => 'people-carry','url' => ['site/teamwork']],
                         ['label' => '个人作业','icon' => 'id-badge', 'url' => ['site/personwork']],
-                        ['label' => 'TEAM', 'header' => true,],
+                        ['label' => 'TEAM', 'header' => true,'visible' =>Yii::$app->user->can('super'),],
                         ['label' => '团队成员','visible' =>Yii::$app->user->can('super'), 'iconClassAdded' => 'text-warning', 'icon' => 'users-cog','url' => ['per-member-info/index']],
                         ['label' => '权限管理','visible' =>Yii::$app->user->can('super'), 'iconClassAdded' => 'text-warning', 'icon' => 'key','url' => ['auth-assignment/index']],
                         ['label' => 'POST', 'header' => true,'visible' =>Yii::$app->user->can('managePost')],
                         ['label' => '新闻发布管理','visible' =>Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'newspaper','url' => ['oly-news/index']],
                         ['label' => '评论管理','visible' => Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'comments','url' => ['oly-newscomment/index']],
+                        ['label' => '图片上传','visible' => Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'image','url' => ['site/upload']],
                     ],
                 ]);
             }

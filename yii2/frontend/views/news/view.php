@@ -28,18 +28,22 @@
 
             use backend\models\OlyNewscommentSearch;
             use yii\helpers\VarDumper;
+            use yii\bootstrap4\Html;
+
 
             $searchModel = new OlyNewscommentSearch();
             $dataProvider = $searchModel->search(['news_id' => $model['news_id']]);
             $models = $dataProvider->getModels();
             $cnt = 1;
             foreach ($models as $model) {
+                $username = Html::encode($model['cmtUser']['username']);
+                $content = Html::encode($model['cmt_content']);
                 $html = <<<EOT
             <div class="comment-list" id="commentList">
                 <div class="comment">
                     <div class="comment-content">
-                        <p class="comment-content-name" style="font-size:larger;">{$model['cmtUser']['username']}</p>
-                        <p class="comment-content-article" style="font-size:20px;">{$model['cmt_content']}</p>
+                        <p class="comment-content-name" style="font-size:larger;">{$username}</p>
+                        <p class="comment-content-article" style="font-size:20px;">{$content}</p>
                         <p class="comment-content-footer" style="font-size:small;">
                             <span class="comment-content-footer-id">#{$cnt}</span>
                             <span class="comment-content-footer-timestamp">{$model['cmt_date']}</span>

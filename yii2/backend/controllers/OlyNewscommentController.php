@@ -2,8 +2,8 @@
 
 namespace backend\controllers;
 
-use app\models\OlyNewscomment;
-use app\models\OlyNewscommentSearch;
+use backend\models\OlyNewscomment;
+use backend\models\OlyNewscommentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

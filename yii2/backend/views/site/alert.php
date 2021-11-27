@@ -1,8 +1,11 @@
 <?php
 use yii\bootstrap4\Alert;
-echo Alert::widget([
-  'options' => [
-      'class' => 'alert-danger',
-  ],
-  'body' => $msg,
+$this->title='';
+
+
+echo \hail812\adminlte\widgets\Callout::widget([
+    'type' => $type,
+    'head' => $head,
+    'body' => $msg,
 ]);
+?>
