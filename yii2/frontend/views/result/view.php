@@ -6,7 +6,6 @@
  * Coding by shihaonming 1911463, 20211127
  * This is the result view of the frontend web.
  */
-?>
 
 use yii\helpers\VarDumper;
 use frontend\models\OlyAthletesInfoSearch;

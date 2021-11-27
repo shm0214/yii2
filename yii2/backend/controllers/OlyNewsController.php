@@ -2,8 +2,8 @@
 
 namespace backend\controllers;
 
-use frontend\models\OlyNews;
-use frontend\models\OlyNewsSearch;
+use backend\models\OlyNews;
+use backend\models\OlyNewsSearch;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use backend\controllers\PostController;
