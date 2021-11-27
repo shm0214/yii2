@@ -1,3 +1,14 @@
+<?php
+
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by shihaonming 1911463, 20211127
+ * This is the contact of the frontend web.
+ */
+
+?>
+
 <section id="contant" class="contant main-heading team">
     <div class="row">
         <div class="container">

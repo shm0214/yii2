@@ -11,7 +11,7 @@ use yii\helpers\Html;
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?=\yii\helpers\Url::home()?>" class="nav-link">Home</a>
+            <a href="<?= \yii\helpers\Url::home() ?>" class="nav-link">主页</a>
         </li>
     </ul>
 
@@ -19,7 +19,7 @@ use yii\helpers\Html;
     <ul class="navbar-nav ml-auto">
 
         <li class="nav-item">
-            <?= Html::a('<i class="fas fa-sign-out-alt"></i>', ['/site/logout'], ['data-method' => 'post', 'class' => 'nav-link','url' => ['site/logout'],]) ?>
+            <?= Html::a('<i class="fas fa-sign-out-alt"></i>', ['/site/logout'], ['data-method' => 'post', 'class' => 'nav-link', 'url' => ['site/logout'],]) ?>
         </li>
         <li class="nav-item">
             <a class="nav-link" data-widget="fullscreen" href="#" role="button">

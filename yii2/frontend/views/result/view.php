@@ -1,5 +1,13 @@
 <?php
 
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by shihaonming 1911463, 20211127
+ * This is the result view of the frontend web.
+ */
+?>
+
 use yii\helpers\VarDumper;
 use frontend\models\OlyAthletesInfoSearch;
 use frontend\models\OlyPrizeInfoSearch;
@@ -40,13 +48,13 @@ use frontend\models\OlyPrizeInfoSearch;
                 <font>&#8250;</font>
                 <span style="height: 60px; width: 300px">
                     <div style="height:60px; line-height: 60px; font-size: larger">
-                <?php
-                    if($type)
-                        echo $type['type_name_zh'];
-                    else
-                        echo '赛事';
-                ?>
-                </div>
+                        <?php
+                        if ($type)
+                            echo $type['type_name_zh'];
+                        else
+                            echo '赛事';
+                        ?>
+                    </div>
                 </span>
                 <ul id='type' style="height:200px;overflow-y:auto; overflow-x: hidden;  background: #f4e1ca; width: 300px; z-index: 9999">
                     <?php

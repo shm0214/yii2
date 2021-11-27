@@ -1,3 +1,14 @@
+<?php
+
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by shihaonming 1911463, 20211127
+ * This is the about of the frontend web.
+ */
+
+?>
+
 <section id="contant" class="contant main-heading" style="padding-bottom:0;margin-bottom:-1px;position:relative;z-index:1;">
     <div class="aboutus">
         <div class="container">

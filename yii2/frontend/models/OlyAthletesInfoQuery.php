@@ -1,5 +1,11 @@
 <?php
 
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by baying 1911537, 20211126
+ * This is the athlete query model of the frontend web.
+ */
 namespace frontend\models;
 
 /**

@@ -1,13 +1,13 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\ListView;
+use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\OlyNewscommentSearch */
+/* @var $searchModel backend\models\OlyNewscommentSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Oly Newscomments';
+$this->title = '评论管理';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="oly-newscomment-index">
@@ -15,18 +15,27 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Oly Newscomment', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('创建新评论', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <?= ListView::widget([
+    <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'itemOptions' => ['class' => 'item'],
-        'itemView' => function ($model, $key, $index, $widget) {
-            return Html::a(Html::encode($model->cmt_id), ['view', 'cmt_id' => $model->cmt_id]);
-        },
-    ]) ?>
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'cmt_id',
+            'cmt_userid',
+            'cmt_date',
+            'cmt_content:ntext',
+            'cmt_newsid',
+            //'cmt_trashed',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
 
 
 </div>

@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\PerMemberInfoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Per Member Infos';
+$this->title = '成员信息';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="per-member-info-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Per Member Info', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('添加成员', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -30,7 +30,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'sid',
             'name:ntext',
             'introduction:ntext',
-            'image_path',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

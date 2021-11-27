@@ -1,5 +1,12 @@
 <?php
 
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by gongan 1913076, 20211126
+ * This is the contact form query of the frontend web.
+ */
+
 namespace frontend\models;
 
 /**

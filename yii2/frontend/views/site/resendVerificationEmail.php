@@ -1,5 +1,12 @@
 <?php
 
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by gongan 1913076, 20211124
+ * This is the resend verification email of the frontend web.
+ */
+
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap4\ActiveForm */
 /* @var $model \frontend\models\ResetPasswordForm */

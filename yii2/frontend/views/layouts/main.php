@@ -1,5 +1,12 @@
 <?php
 
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by shihaonming 1911463, 20211127
+ * This is the main layout of the frontend web.
+ */
+
 use common\widgets\Alert;
 
 ?>
@@ -14,12 +21,12 @@ use common\widgets\Alert;
 <!-- Mobile Metas -->
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <!-- Site Metas -->
-<title>Game Info</title>
+<title>2020东京奥运会</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- Site Icons -->
-<link rel="shortcut icon" href="" type="image/x-icon" />
+<link rel="shortcut icon" href="images/logo_color.svg" type="image/x-icon" />
 <link rel="apple-touch-icon" href="">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">

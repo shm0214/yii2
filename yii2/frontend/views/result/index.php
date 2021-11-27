@@ -1,5 +1,13 @@
 <?php
 
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by shihaonming 1911463, 20211127
+ * This is the result home of the frontend web.
+ */
+
+
 use frontend\models\OlyGameInfoSearch;
 ?>
 

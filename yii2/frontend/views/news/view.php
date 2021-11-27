@@ -1,3 +1,14 @@
+<?php
+
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by shihaonming 1911463, 20211127
+ * This is the news view of the frontend web.
+ */
+?>
+
+
 <body class="game_info" data-spy="scroll" data-target=".header">
     <!-- END LOADER -->
     <section id="content" class="contant main-heading team">

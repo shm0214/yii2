@@ -1,5 +1,16 @@
 <?php
 
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by baying 1911537, 20211125
+ * This is the error of the frontend web.
+ */
+
+?>
+
+<?php
+
 /* @var $this yii\web\View */
 /* @var $name string */
 /* @var $message string */

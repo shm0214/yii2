@@ -1,5 +1,13 @@
 <?php
 
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by shihaonming 1911463, 20211127
+ * This is the game model of the frontend web.
+ */
+
+
 namespace frontend\models;
 
 use Yii;

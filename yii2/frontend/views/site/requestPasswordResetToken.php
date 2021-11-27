@@ -1,5 +1,16 @@
 <?php
 
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by shihaonming 1911463, 20211127
+ * This is the request password reset token of the frontend web.
+ */
+
+?>
+
+<?php
+
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap4\ActiveForm */
 /* @var $model \frontend\models\PasswordResetRequestForm */
@@ -19,11 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-lg-5">
             <?php $form = ActiveForm::begin(['id' => 'request-password-reset-form']); ?>
 
-                <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
+            <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
 
-                <div class="form-group" style="display: flex; justify-content:center;">
-                    <?= Html::submitButton('发送', ['class' => 'btn btn-primary']) ?>
-                </div>
+            <div class="form-group" style="display: flex; justify-content:center;">
+                <?= Html::submitButton('发送', ['class' => 'btn btn-primary']) ?>
+            </div>
 
             <?php ActiveForm::end(); ?>
         </div>

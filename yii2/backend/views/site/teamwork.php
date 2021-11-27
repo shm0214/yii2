@@ -13,9 +13,9 @@ $this->title = '团队作业';
 ?>
 <div class="card card-primary">
     <div class="card-header">
-        <h1 class="card-title">团队：(取个名字)</h1>
+        <h1 class="card-title">团队：DON'T KHOW PHP, NKU</h1>
         <div class="card-tools">
-        <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
+            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
         </div>
     </div>
 
@@ -35,7 +35,7 @@ $this->title = '团队作业';
     </div>
     <!-- /.card-body -->
     <div class="card-footer">
-        团队成员：安祺(1913630)、时浩明()、巴瀛()、龚安()
+        团队成员：安祺(1913630)、时浩铭(1911463)、巴瀛(1911537)、龚安(1913076)
     </div>
 
 </div>
