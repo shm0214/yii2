@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by baying 1911537, 20211128
+ * This is team-member-information model of the backend web.
+ */
+
 namespace backend\models;
 
 use Yii;
@@ -29,7 +35,7 @@ class PerMemberInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id'], 'required'],
+            [['name', 'introduction','sid'], 'required'],
             [['id'], 'integer'],
             [['name', 'introduction'], 'string'],
             [['sid'], 'string', 'max' => 7],

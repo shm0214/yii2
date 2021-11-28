@@ -1,5 +1,13 @@
 <?php
 
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by anqi 1913630, 20211128
+ * This is a admin access rule controller of the backend web.
+ */
+
+
 namespace backend\controllers;
 
 use yii\web\Controller;

@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by anqi 1913630, 20211128
+ * This is news controller of the backend web.
+ */
+
 namespace backend\controllers;
 
 use backend\models\OlyNews;

@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by gongan 1913076, 20211128
+ * This is contact-form view of the backend web.
+ */
+
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 

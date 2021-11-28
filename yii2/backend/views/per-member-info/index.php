@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by baying 1911537, 20211128
+ * This is team-member-info index view of the backend web.
+ */
+
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -23,8 +29,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
             'sid',
             'name:ntext',
             'introduction:ntext',

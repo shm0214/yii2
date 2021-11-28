@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by baying 1911537, 20211128
+ * This is team-member-info view view of the backend web.
+ */
+
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
@@ -14,8 +20,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="per-member-info-view">
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('更新', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('删除', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -27,11 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+            // 'id',
             'sid',
             'name:ntext',
             'introduction:ntext',
-            'image_path',
+            // 'image_path',
         ],
     ]) ?>
 

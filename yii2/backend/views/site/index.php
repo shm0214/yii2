@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by anqi 1913630, 20211128
+ * This is index view of the backend web.
+ */
+
 $this->title = '主页';
 $this->params['breadcrumbs'] = [['label' => $this->title]];
 ?>

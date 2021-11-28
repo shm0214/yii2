@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by baying 1911537, 20211128
+ * This is team-member-information model search of the backend web.
+ */
+
 namespace backend\models;
 
 use yii\base\Model;

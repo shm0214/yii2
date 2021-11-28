@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: DON'T KNOW PHP, NKU
+ * Coding by anqi 1913630, 20211128
+ * This is login-layout of the backend web.
+ */
+
 /* @var $this \yii\web\View */
 /* @var $content string */
 
