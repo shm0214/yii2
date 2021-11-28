@@ -26,7 +26,8 @@ use kartik\datetime\DateTimePicker;
     <?= $form->field($model, 'news_content')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'news_cover')->fileInput() ?>
-
+    <p>注：<font color="red">图片最大1MB</font></p>
+    
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>

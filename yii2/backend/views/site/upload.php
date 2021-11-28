@@ -12,6 +12,9 @@ $this->title='文件上传';
 ?>
 
 <div class="card col-4">
+    <div class="card-header">
+            <h1 class="card-title">图片上传<font color="red">(最大1MB)</font></h1>
+    </div>
     <div class="card-body">
         <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
         <?= $form->field($model, 'imageFile')->fileInput() ?>
