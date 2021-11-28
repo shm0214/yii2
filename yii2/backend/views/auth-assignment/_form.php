@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'item_name')->dropDownList(
-        ['admin','poster', 'speaker']
+        ['admin'=>'admin','poster'=>'poster', 'speaker'=>'speaker']
     );
     ?>
 

@@ -28,9 +28,9 @@ $this->title = '个人作业';
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <h4><a href="../../data/personal/">作业1：网页前端初探</a></h4>
-                        <h4><a href="../../data/personal/">作业2：Web前端设计</a></h4>
-                        <h4><a href="../../data/personal/">作业3：开源建站工具初试</a></h4>
+                        <h4><a href="../../data/personal/作业1(1913630_安祺).zip">作业1：网页前端初探</a></h4>
+                        <h4><a href="../../data/personal/作业2(1913630_安祺).zip">作业2：Web前端设计</a></h4>
+                        <h4><a href="../../data/personal/作业3(1913630_安祺).zip">作业3：开源建站工具初试</a></h4>
                     </div>
                 </div>
             </div>

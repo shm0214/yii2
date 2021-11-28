@@ -12,7 +12,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\AuthAssignment */
 
-$this->title = $model->item_name;
+$this->title = $model->user_id;
 $this->params['breadcrumbs'][] = ['label' => '用户权限', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
