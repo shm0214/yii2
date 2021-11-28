@@ -3,11 +3,11 @@
 namespace backend\models;
 
 /**
- * This is the ActiveQuery class for [[AuthAssignment]].
+ * This is the ActiveQuery class for [[User]].
  *
- * @see AuthAssignment
+ * @see User
  */
-class AuthAssignmentQuery extends \yii\db\ActiveQuery
+class UserQuery extends \yii\db\ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +16,7 @@ class AuthAssignmentQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return AuthAssignment[]|array
+     * @return User[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class AuthAssignmentQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return AuthAssignment|array|null
+     * @return User|array|null
      */
     public function one($db = null)
     {

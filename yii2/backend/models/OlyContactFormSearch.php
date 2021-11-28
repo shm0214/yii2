@@ -4,12 +4,12 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\AuthAssignment;
+use backend\models\OlyContactForm;
 
 /**
- * AuthAssignmentSearch represents the model behind the search form of `app\models\AuthAssignment`.
+ * OlyContactFormSearch represents the model behind the search form of `backend\models\OlyContactForm`.
  */
-class AuthAssignmentSearch extends AuthAssignment
+class OlyContactFormSearch extends OlyContactForm
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class AuthAssignmentSearch extends AuthAssignment
     public function rules()
     {
         return [
-            [['item_name', 'user_id'], 'safe'],
-            [['created_at'], 'integer'],
+            [['contact_id'], 'integer'],
+            [['username', 'email', 'address', 'message'], 'safe'],
         ];
     }
 
@@ -40,9 +40,8 @@ class AuthAssignmentSearch extends AuthAssignment
      */
     public function search($params)
     {
-        $query = AuthAssignment::find();
-        $query->joinWith(['user']);
-        $query->select("auth_assignment.*,username");
+        $query = OlyContactForm::find();
+
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
@@ -59,11 +58,13 @@ class AuthAssignmentSearch extends AuthAssignment
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'created_at' => $this->created_at,
+            'contact_id' => $this->contact_id,
         ]);
 
-        $query->andFilterWhere(['like', 'item_name', $this->item_name])
-            ->andFilterWhere(['like', 'user_id', $this->user_id]);
+        $query->andFilterWhere(['like', 'username', $this->username])
+            ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like', 'address', $this->address])
+            ->andFilterWhere(['like', 'message', $this->message]);
 
         return $dataProvider;
     }

@@ -11,23 +11,21 @@ $this->title = '权限管理';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="auth-assignment-index">
+<!-- <?php
+    // $models = array_values($dataProvider->getModels());
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
+    // foreach ($models as $index => $model) {
+    //    echo $model['username'];
+    // }
+?> -->
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'item_name',
             'user_id',
-            'created_at',
-
-            ['class' => 'yii\grid\ActionColumn'],
+            // 'username',
+            'item_name',
+            ['class' => 'yii\grid\ActionColumn','template' => '{view} {update}'],
         ],
     ]); ?>
 

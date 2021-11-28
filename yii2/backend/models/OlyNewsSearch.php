@@ -1,12 +1,5 @@
 <?php
 
-
-/**
- * Team: DON'T KNOW PHP, NKU
- * Coding by shihaonming 1911463, 20211127
- * This is the news search model of the frontend web.
- */
-
 namespace backend\models;
 
 use yii\base\Model;
@@ -14,7 +7,7 @@ use yii\data\ActiveDataProvider;
 use backend\models\OlyNews;
 
 /**
- * OlyNewsSearch represents the model behind the search form of `frontend\models\OlyNews`.
+ * OlyNewsSearch represents the model behind the search form of `backend\models\OlyNews`.
  */
 class OlyNewsSearch extends OlyNews
 {
@@ -48,7 +41,6 @@ class OlyNewsSearch extends OlyNews
     public function search($params)
     {
         $query = OlyNews::find();
-        $query->orderBy(['news_time' => SORT_DESC]);
 
         // add conditions that should always apply here
 

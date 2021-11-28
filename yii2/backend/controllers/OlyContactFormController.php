@@ -2,16 +2,16 @@
 
 namespace backend\controllers;
 
-use backend\models\OlyNews;
-use backend\models\OlyNewsSearch;
+use backend\models\OlyContactForm;
+use backend\models\OlyContactFormSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * OlyNewsController implements the CRUD actions for OlyNews model.
+ * OlyContactFormController implements the CRUD actions for OlyContactForm model.
  */
-class OlyNewsController extends Controller
+class OlyContactFormController extends Controller
 {
     /**
      * @inheritDoc
@@ -32,12 +32,12 @@ class OlyNewsController extends Controller
     }
 
     /**
-     * Lists all OlyNews models.
+     * Lists all OlyContactForm models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new OlyNewsSearch();
+        $searchModel = new OlyContactFormSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -47,30 +47,30 @@ class OlyNewsController extends Controller
     }
 
     /**
-     * Displays a single OlyNews model.
-     * @param string $id 新闻标识
+     * Displays a single OlyContactForm model.
+     * @param int $contact_id Contact ID
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id)
+    public function actionView($contact_id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($contact_id),
         ]);
     }
 
     /**
-     * Creates a new OlyNews model.
+     * Creates a new OlyContactForm model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new OlyNews();
+        $model = new OlyContactForm();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->news_id]);
+                return $this->redirect(['view', 'contact_id' => $model->contact_id]);
             }
         } else {
             $model->loadDefaultValues();
@@ -82,18 +82,18 @@ class OlyNewsController extends Controller
     }
 
     /**
-     * Updates an existing OlyNews model.
+     * Updates an existing OlyContactForm model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param string $id 新闻标识
+     * @param int $contact_id Contact ID
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
+    public function actionUpdate($contact_id)
     {
-        $model = $this->findModel($id);
+        $model = $this->findModel($contact_id);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->news_id]);
+            return $this->redirect(['view', 'contact_id' => $model->contact_id]);
         }
 
         return $this->render('update', [
@@ -102,29 +102,29 @@ class OlyNewsController extends Controller
     }
 
     /**
-     * Deletes an existing OlyNews model.
+     * Deletes an existing OlyContactForm model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param string $id 新闻标识
+     * @param int $contact_id Contact ID
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($id)
+    public function actionDelete($contact_id)
     {
-        $this->findModel($id)->delete();
+        $this->findModel($contact_id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the OlyNews model based on its primary key value.
+     * Finds the OlyContactForm model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param string $id 新闻标识
-     * @return OlyNews the loaded model
+     * @param int $contact_id Contact ID
+     * @return OlyContactForm the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
+    protected function findModel($contact_id)
     {
-        if (($model = OlyNews::findOne($id)) !== null) {
+        if (($model = OlyContactForm::findOne($id)) !== null) {
             return $model;
         }
 

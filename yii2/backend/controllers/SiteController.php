@@ -8,6 +8,10 @@ use yii\filters\AccessControl;
 use common\models\LoginForm;
 use backend\models\UploadForm;
 use yii\web\UploadedFile;
+use backend\models\OlyContactForm;
+use backend\models\OlyNewscomment;
+use backend\models\OlyNews;
+use backend\models\User;
 
 /**
  * Site controller
@@ -67,7 +71,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->render('index', [
+            'contactCount' => OlyContactForm::find()->count(),
+            'newsCount'=> OlyNews::find()->count(),
+            'cmsCount' =>OlyNewscomment::find()->count(),
+            'userCount'=>User::find()->count(),
+        ]);
     }
 
     /**

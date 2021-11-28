@@ -7,13 +7,11 @@ use yii\widgets\DetailView;
 /* @var $model app\models\PerMemberInfo */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Per Member Infos', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => '团队成员信息', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="per-member-info-view">
-
-    <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>

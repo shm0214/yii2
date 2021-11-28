@@ -5,7 +5,7 @@ namespace backend\models;
 use Yii;
 
 /**
- * This is the model class for table "oly_news".
+ * This is the model class for table "{{%oly_news}}".
  *
  * @property string $news_title 新闻标题
  * @property string $news_abstract 新闻摘要
@@ -23,7 +23,7 @@ class OlyNews extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'oly_news';
+        return '{{%oly_news}}';
     }
 
     /**
