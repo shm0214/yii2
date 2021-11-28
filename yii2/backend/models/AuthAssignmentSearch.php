@@ -11,6 +11,9 @@ use backend\models\AuthAssignment;
  */
 class AuthAssignmentSearch extends AuthAssignment
 {
+
+    public $user_name;
+
     /**
      * {@inheritdoc}
      */
@@ -19,6 +22,7 @@ class AuthAssignmentSearch extends AuthAssignment
         return [
             [['item_name', 'user_id'], 'safe'],
             [['created_at'], 'integer'],
+            [['user_name'], 'safe'],
         ];
     }
 
@@ -42,7 +46,7 @@ class AuthAssignmentSearch extends AuthAssignment
     {
         $query = AuthAssignment::find();
         $query->joinWith(['user']);
-        $query->select("auth_assignment.*,username");
+        $query->select("auth_assignment.*,user.username");
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
@@ -57,13 +61,21 @@ class AuthAssignmentSearch extends AuthAssignment
             return $dataProvider;
         }
 
+        $dataProvider->sort->attributes['user_name'] = [
+            'asc' => ['user.username' => SORT_ASC],
+            'desc' => ['user.username' => SORT_DESC],
+        ];
+
+        $dataProvider->getSort();
+
         // grid filtering conditions
         $query->andFilterWhere([
             'created_at' => $this->created_at,
         ]);
 
         $query->andFilterWhere(['like', 'item_name', $this->item_name])
-            ->andFilterWhere(['like', 'user_id', $this->user_id]);
+            ->andFilterWhere(['like', 'user_id', $this->user_id])
+            ->andFilterWhere(['like', 'user.username', $this->user_name]);
 
         return $dataProvider;
     }

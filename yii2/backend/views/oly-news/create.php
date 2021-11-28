@@ -5,13 +5,11 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\OlyNews */
 
-$this->title = 'Create Oly News';
-$this->params['breadcrumbs'][] = ['label' => 'Oly News', 'url' => ['index']];
+$this->title = '发布新闻';
+$this->params['breadcrumbs'][] = ['label' => '新闻', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="oly-news-create">
-
-    <h1><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [
         'model' => $model,

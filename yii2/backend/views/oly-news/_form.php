@@ -19,17 +19,7 @@ use kartik\datetime\DateTimePicker;
 
     <?= $form->field($model, 'news_content')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'news_cover')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'news_time')->textInput() ?>
-    <?= $form->field($model, 'created_at')->widget(DateTimePicker::classname(), [ 
-        'options' => ['placeholder' => ''], 
-        'pluginOptions' => [ 
-            'autoclose' => true, 
-            'todayHighlight' => true, 
-            'format' => 'yyyy-mm-dd', 
-        ] 
-    ]); ?>
+    <?= $form->field($model, 'news_cover')->fileInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

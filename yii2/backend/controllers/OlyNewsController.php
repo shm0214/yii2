@@ -7,6 +7,8 @@ use backend\models\OlyNewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+use backend\models\UploadForm;
 
 /**
  * OlyNewsController implements the CRUD actions for OlyNews model.
@@ -67,17 +69,26 @@ class OlyNewsController extends Controller
     public function actionCreate()
     {
         $model = new OlyNews();
+        $filemodel=new UploadForm();
 
         if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->news_id]);
+            if($model->load($this->request->post())){
+                $filemodel->imageFile = UploadedFile::getInstance($model, 'news_cover');
+                $path=$filemodel->upload();
+                $model->news_cover=$path;
+                $model->news_time=date('Y-m-d H:i:s');
+                if ($model->save()) {
+                    return $this->redirect(['view', 'id' => $model->news_id]);
+                }
             }
+
         } else {
             $model->loadDefaultValues();
         }
 
         return $this->render('create', [
             'model' => $model,
+            'filemodel'=>$filemodel,
         ]);
     }
 

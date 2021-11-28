@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\OlyContactFormSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Oly Contact Forms';
+$this->title = '联系表单';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="oly-contact-form-index">

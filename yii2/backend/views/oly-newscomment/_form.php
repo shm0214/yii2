@@ -12,15 +12,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'cmt_userid')->textInput() ?>
-
-    <?= $form->field($model, 'cmt_date')->textInput() ?>
-
     <?= $form->field($model, 'cmt_content')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'cmt_newsid')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'cmt_trashed')->textInput() ?>
+    <?= $form->field($model, 'cmt_trashed')->radioList([1=>'删除',0=>'未删除']);?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

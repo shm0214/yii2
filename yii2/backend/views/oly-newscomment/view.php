@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\OlyNewscomment */
 
 $this->title = $model->cmt_id;
-$this->params['breadcrumbs'][] = ['label' => 'Oly Newscomments', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => '新闻评论', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -16,8 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'cmt_id' => $model->cmt_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'cmt_id' => $model->cmt_id], [
+        <?= Html::a('Update', ['update', 'id' => $model->cmt_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->cmt_id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',

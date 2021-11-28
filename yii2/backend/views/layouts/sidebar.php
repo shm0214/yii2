@@ -31,15 +31,15 @@
             }else{
                 echo \hail812\adminlte\widgets\Menu::widget([
                     'items' => [
-                        ['label' => 'Yii2 PROVIDED', 'header' => true,'visible' => !YII_ENV_TEST],
-                        ['label' => 'Gii', 'iconClassAdded' => 'text-danger', 'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank','visible' => !YII_ENV_TEST],
-                        ['label' => 'Debug', 'iconClassAdded' => 'text-danger', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank','visible' => !YII_ENV_TEST],
+                        ['label' => 'Yii2 PROVIDED', 'header' => true,'visible' => YII_ENV_DEV],
+                        ['label' => 'Gii', 'iconClassAdded' => 'text-danger', 'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank','visible' => YII_ENV_DEV],
+                        ['label' => 'Debug', 'iconClassAdded' => 'text-danger', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank','visible' => YII_ENV_DEV],
                         ['label' => '作业展示', 'header' => true],
                         ['label' => '团队作业', 'icon' => 'people-carry','url' => ['site/teamwork']],
                         ['label' => '个人作业','icon' => 'id-badge', 'url' => ['site/personwork']],
                         ['label' => '高级管理', 'header' => true,'visible' =>Yii::$app->user->can('super'),],
                         ['label' => '团队成员','visible' =>Yii::$app->user->can('super'), 'iconClassAdded' => 'text-warning', 'icon' => 'users-cog','url' => ['per-member-info/index']],
-                        ['label' => '权限管理','visible' =>Yii::$app->user->can('super'), 'iconClassAdded' => 'text-warning', 'icon' => 'key','url' => ['auth-assignment/index']],
+                        ['label' => '用户及权限管理','visible' =>Yii::$app->user->can('super'), 'iconClassAdded' => 'text-warning', 'icon' => 'key','url' => ['auth-assignment/index']],
                         ['label' => '信息发布与管理', 'header' => true,'visible' =>Yii::$app->user->can('managePost')],
                         ['label' => '新闻发布管理','visible' =>Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'newspaper','url' => ['oly-news/index']],
                         ['label' => '评论管理','visible' => Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'comments','url' => ['oly-newscomment/index']],

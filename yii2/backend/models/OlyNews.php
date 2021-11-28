@@ -34,7 +34,7 @@ class OlyNews extends \yii\db\ActiveRecord
         return [
             [['news_title', 'news_abstract', 'news_content', 'news_cover'], 'required'],
             [['news_content'], 'string'],
-            [['news_time'], 'safe'],
+            [['news_time', 'news_cover'], 'safe'],
             [['news_title', 'news_cover'], 'string', 'max' => 100],
             [['news_abstract'], 'string', 'max' => 500],
         ];
@@ -49,9 +49,9 @@ class OlyNews extends \yii\db\ActiveRecord
             'news_title' => '新闻标题',
             'news_abstract' => '新闻摘要',
             'news_content' => '新闻内容',
-            'news_cover' => '新闻封面url',
+            'news_cover' => '新闻封面',
             'news_id' => '新闻标识',
-            'news_time' => 'News Time',
+            'news_time' => '发布时间',
         ];
     }
 

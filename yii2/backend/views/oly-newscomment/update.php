@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\OlyNewscomment */
 
-$this->title = 'Update Oly Newscomment: ' . $model->cmt_id;
-$this->params['breadcrumbs'][] = ['label' => 'Oly Newscomments', 'url' => ['index']];
+$this->title = '修改评论: ' . $model->cmt_id;
+$this->params['breadcrumbs'][] = ['label' => '新闻评论', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->cmt_id, 'url' => ['view', 'cmt_id' => $model->cmt_id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

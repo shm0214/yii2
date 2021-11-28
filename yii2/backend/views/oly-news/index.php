@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\OlyNewsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Oly News';
+$this->title = '新闻管理';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="oly-news-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Oly News', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('发布新闻', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'news_title',
             'news_abstract',
             // 'news_content:ntext',
-            'news_cover',
+            // 'news_cover',
             // 'news_id',
             'news_time',
 
