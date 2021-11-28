@@ -43,7 +43,7 @@
                         ['label' => '信息发布与管理', 'header' => true,'visible' =>Yii::$app->user->can('managePost')],
                         ['label' => '新闻发布管理','visible' =>Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'newspaper','url' => ['oly-news/index']],
                         ['label' => '评论管理','visible' => Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'comments','url' => ['oly-newscomment/index']],
-                        ['label' => '联系信息','visible' => Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'image','url' => ['oly-contact-form/index']],
+                        ['label' => '联系信息','visible' => Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'phone-volume','url' => ['oly-contact-form/index']],
                         ['label' => '图片上传','visible' => Yii::$app->user->can('managePost'), 'iconClassAdded' => 'text-info', 'icon' => 'image','url' => ['site/upload']],
                     ],
                 ]);
